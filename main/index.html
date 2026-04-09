@@ -1,0 +1,3782 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>易学与世界文明 | I Ching and World Civilizations</title>
+    <meta
+      name="description"
+      content="易学与世界文明是一个个人独立运营的学术与咨询网站，围绕《周易》开展文本研究、经典互证、文明比较、出版传播与咨询合作。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Noto+Sans+SC:wght@400;500;700&amp;family=Noto+Serif+SC:wght@500;600;700&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #111a20;
+        --ink-soft: #22303a;
+        --paper: #f4ede0;
+        --paper-deep: #ebe0cf;
+        --surface: #fffaf2;
+        --line: rgba(17, 26, 32, 0.12);
+        --line-strong: rgba(255, 250, 242, 0.18);
+        --accent: #9f6a34;
+        --accent-soft: #d7be9a;
+        --olive: #556457;
+        --copy: #2d3a42;
+        --muted: #6f706c;
+        --shadow: 0 20px 60px rgba(17, 26, 32, 0.12);
+        --font-sans: "Source Sans 3", "Noto Sans SC", sans-serif;
+        --font-serif: "Cormorant Garamond", "Noto Serif SC", serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 6.5rem;
+      }
+
+      body {
+        margin: 0;
+        font-family: var(--font-sans);
+        background: var(--paper);
+        color: var(--copy);
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      body[data-lang="zh"] .lang-en,
+      body[data-lang="en"] .lang-zh {
+        display: none !important;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      textarea,
+      select {
+        font: inherit;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .container {
+        width: min(1180px, calc(100% - 2rem));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        backdrop-filter: blur(14px);
+        background: rgba(255, 250, 242, 0.92);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .topline {
+        border-bottom: 1px solid var(--line);
+        background:
+          linear-gradient(90deg, rgba(159, 106, 52, 0.08), transparent 65%),
+          var(--surface);
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      .topline .container {
+        padding: 0.65rem 0;
+      }
+
+      .nav-wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        min-height: 5.25rem;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        min-width: 0;
+      }
+
+      .brand-mark {
+        width: 3.2rem;
+        height: 3.2rem;
+        display: grid;
+        align-content: center;
+        gap: 0.28rem;
+        padding: 0.7rem;
+        border-radius: 1rem;
+        background:
+          linear-gradient(140deg, rgba(159, 106, 52, 0.15), rgba(17, 26, 32, 0.08)),
+          var(--surface);
+        border: 1px solid rgba(159, 106, 52, 0.18);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+      }
+
+      .brand-mark span {
+        display: block;
+        height: 0.22rem;
+        background: var(--ink);
+      }
+
+      .brand-mark .broken {
+        position: relative;
+        background: transparent;
+      }
+
+      .brand-mark .broken::before,
+      .brand-mark .broken::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 40%;
+        height: 100%;
+        background: var(--ink);
+      }
+
+      .brand-mark .broken::after {
+        right: 0;
+      }
+
+      .brand-copy {
+        min-width: 0;
+      }
+
+      .brand-title {
+        display: block;
+        font-family: var(--font-serif);
+        font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+        line-height: 1.1;
+        color: var(--ink);
+      }
+
+      .brand-subtitle {
+        display: block;
+        margin-top: 0.2rem;
+        font-size: 0.8rem;
+        color: var(--muted);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .nav-panel {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 1.15rem;
+      }
+
+      .nav-links > a,
+      .nav-parent {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.35rem 0;
+        color: var(--copy);
+        font-size: 0.98rem;
+      }
+
+      .nav-parent {
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+      }
+
+      .nav-group {
+        position: relative;
+      }
+
+      .nav-links > a::after,
+      .nav-parent::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -0.2rem;
+        width: 100%;
+        height: 2px;
+        background: var(--accent);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.25s ease;
+      }
+
+      .nav-links > a:hover::after,
+      .nav-links > a:focus-visible::after,
+      .nav-group:hover > .nav-parent::after,
+      .nav-group:focus-within > .nav-parent::after,
+      .nav-group.open > .nav-parent::after {
+        transform: scaleX(1);
+      }
+
+      .nav-caret {
+        width: 0.58rem;
+        height: 0.58rem;
+        margin-top: -0.12rem;
+        border-right: 1.5px solid currentColor;
+        border-bottom: 1.5px solid currentColor;
+        transform: rotate(45deg);
+        transition: transform 0.2s ease;
+      }
+
+      .nav-group:hover .nav-caret,
+      .nav-group:focus-within .nav-caret,
+      .nav-group.open .nav-caret {
+        transform: rotate(225deg);
+      }
+
+      .nav-submenu {
+        position: absolute;
+        top: calc(100% + 0.95rem);
+        left: -1rem;
+        min-width: 15rem;
+        padding: 0.6rem;
+        display: grid;
+        gap: 0.25rem;
+        border-radius: 1.15rem;
+        border: 1px solid var(--line);
+        background: rgba(255, 250, 242, 0.98);
+        box-shadow: var(--shadow);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(0.35rem);
+        transition:
+          opacity 0.2s ease,
+          transform 0.2s ease,
+          visibility 0.2s ease;
+      }
+
+      .nav-submenu a {
+        padding: 0.72rem 0.82rem;
+        border-radius: 0.9rem;
+        font-size: 0.93rem;
+        line-height: 1.35;
+      }
+
+      .nav-submenu a:hover,
+      .nav-submenu a:focus-visible {
+        background: rgba(17, 26, 32, 0.05);
+      }
+
+      .nav-group:hover .nav-submenu,
+      .nav-group:focus-within .nav-submenu,
+      .nav-group.open .nav-submenu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .lang-switch,
+      .menu-toggle,
+      .button {
+        border: 1px solid transparent;
+        cursor: pointer;
+        transition:
+          transform 0.2s ease,
+          background-color 0.2s ease,
+          border-color 0.2s ease,
+          color 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .lang-switch,
+      .menu-toggle {
+        background: var(--surface);
+        color: var(--ink);
+        border-color: rgba(17, 26, 32, 0.12);
+        border-radius: 999px;
+        padding: 0.68rem 1rem;
+        font-size: 0.92rem;
+      }
+
+      .lang-switch:hover,
+      .menu-toggle:hover {
+        transform: translateY(-1px);
+        border-color: rgba(159, 106, 52, 0.36);
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: 4.5rem 0 0;
+        color: rgba(255, 250, 242, 0.92);
+        background:
+          radial-gradient(circle at 15% 18%, rgba(159, 106, 52, 0.28), transparent 24%),
+          radial-gradient(circle at 86% 26%, rgba(215, 190, 154, 0.1), transparent 30%),
+          linear-gradient(135deg, #0f171d 0%, #152330 56%, #1d2734 100%);
+      }
+
+      .hero::before,
+      .hero::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+      }
+
+      .hero::before {
+        inset: 0;
+        background:
+          repeating-linear-gradient(
+            90deg,
+            rgba(255, 250, 242, 0.055) 0,
+            rgba(255, 250, 242, 0.055) 1px,
+            transparent 1px,
+            transparent 92px
+          ),
+          repeating-linear-gradient(
+            0deg,
+            rgba(255, 250, 242, 0.03) 0,
+            rgba(255, 250, 242, 0.03) 1px,
+            transparent 1px,
+            transparent 92px
+          );
+        opacity: 0.55;
+      }
+
+      .hero::after {
+        width: 38rem;
+        height: 38rem;
+        right: -10rem;
+        top: 5rem;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 250, 242, 0.1);
+        box-shadow: inset 0 0 0 3.5rem rgba(255, 250, 242, 0.02);
+      }
+
+      .hero-grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+        gap: 2rem;
+        align-items: start;
+        padding-bottom: 4rem;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7rem;
+        margin: 0 0 1.2rem;
+        color: rgba(255, 250, 242, 0.74);
+        font-size: 0.85rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 3rem;
+        height: 1px;
+        background: rgba(255, 250, 242, 0.5);
+      }
+
+      .hero h1 {
+        margin: 0;
+        font-family: var(--font-serif);
+        font-size: clamp(3rem, 7vw, 5.65rem);
+        line-height: 0.96;
+        letter-spacing: -0.03em;
+        color: #fffaf2;
+      }
+
+      .hero h1 .lang-zh {
+        letter-spacing: 0.02em;
+      }
+
+      .hero-deck {
+        max-width: 40rem;
+        margin: 1.35rem 0 1rem;
+        font-size: clamp(1.15rem, 2vw, 1.48rem);
+        color: rgba(255, 250, 242, 0.82);
+      }
+
+      .hero-body {
+        max-width: 42rem;
+        margin: 0;
+        font-size: 1.05rem;
+        color: rgba(255, 250, 242, 0.74);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+        margin-top: 2rem;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.92rem 1.35rem;
+        border-radius: 999px;
+        font-weight: 600;
+      }
+
+      .button-primary {
+        background: var(--accent);
+        color: #fffaf2;
+        box-shadow: 0 14px 30px rgba(159, 106, 52, 0.22);
+      }
+
+      .button-primary:hover,
+      .button-primary:focus-visible {
+        transform: translateY(-2px);
+        background: #b47d42;
+      }
+
+      .button-secondary {
+        border-color: rgba(255, 250, 242, 0.24);
+        color: #fffaf2;
+        background: rgba(255, 250, 242, 0.06);
+      }
+
+      .button-secondary:hover,
+      .button-secondary:focus-visible {
+        transform: translateY(-2px);
+        border-color: rgba(255, 250, 242, 0.45);
+      }
+
+      .nav-cta {
+        padding: 0.75rem 1.05rem;
+        border-radius: 999px;
+        background: var(--ink);
+        color: #fffaf2;
+        box-shadow: 0 12px 28px rgba(17, 26, 32, 0.18);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .nav-cta:hover,
+      .nav-cta:focus-visible {
+        transform: translateY(-1px);
+      }
+
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+        margin: 2.4rem 0 0;
+        padding: 1.15rem 0 0;
+        list-style: none;
+        border-top: 1px solid rgba(255, 250, 242, 0.12);
+      }
+
+      .hero-stats li {
+        padding-right: 0.8rem;
+      }
+
+      .hero-stats strong {
+        display: block;
+        font-family: var(--font-serif);
+        font-size: 1.8rem;
+        line-height: 1;
+        color: #fffaf2;
+      }
+
+      .hero-stats span {
+        display: block;
+        margin-top: 0.45rem;
+        color: rgba(255, 250, 242, 0.74);
+        font-size: 0.95rem;
+      }
+
+      .hero-aside {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .panel {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.6rem;
+        border: 1px solid var(--line-strong);
+        background:
+          linear-gradient(180deg, rgba(255, 250, 242, 0.12), rgba(255, 250, 242, 0.04)),
+          rgba(17, 26, 32, 0.28);
+        box-shadow: var(--shadow);
+      }
+
+      .hero-panel {
+        padding: 1.5rem;
+      }
+
+      .hero-panel::after {
+        content: "";
+        position: absolute;
+        inset: 1rem;
+        border-radius: 1.2rem;
+        border: 1px solid rgba(255, 250, 242, 0.08);
+        pointer-events: none;
+      }
+
+      .panel-kicker {
+        position: relative;
+        z-index: 1;
+        display: inline-flex;
+        margin-bottom: 0.8rem;
+        padding: 0.3rem 0.7rem;
+        border-radius: 999px;
+        background: rgba(255, 250, 242, 0.08);
+        color: rgba(255, 250, 242, 0.84);
+        font-size: 0.74rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .panel h2,
+      .panel h3,
+      .section-title,
+      .card-title,
+      .publication-feature h3,
+      .advisory-card h3,
+      .contact-card h3,
+      .footer-title {
+        margin: 0;
+        font-family: var(--font-serif);
+        color: var(--ink);
+      }
+
+      .hero-panel h2,
+      .hero-panel h3 {
+        color: #fffaf2;
+      }
+
+      .hexagram {
+        display: grid;
+        gap: 0.46rem;
+        width: 6.4rem;
+        margin: 1.15rem 0 1rem;
+      }
+
+      .hexagram span {
+        display: block;
+        height: 0.38rem;
+        background: rgba(255, 250, 242, 0.84);
+      }
+
+      .hexagram .broken {
+        position: relative;
+        background: transparent;
+      }
+
+      .hexagram .broken::before,
+      .hexagram .broken::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 41%;
+        height: 100%;
+        background: rgba(255, 250, 242, 0.84);
+      }
+
+      .hexagram .broken::after {
+        right: 0;
+      }
+
+      .focus-list {
+        display: grid;
+        gap: 0.9rem;
+        margin: 1.1rem 0 0;
+      }
+
+      .focus-item {
+        display: grid;
+        grid-template-columns: 2.3rem minmax(0, 1fr);
+        gap: 0.75rem;
+        align-items: start;
+      }
+
+      .focus-item > span:first-child {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.3rem;
+        height: 2.3rem;
+        border-radius: 50%;
+        background: rgba(255, 250, 242, 0.1);
+        font-family: var(--font-serif);
+        font-size: 1.02rem;
+        color: #fffaf2;
+      }
+
+      .focus-item p,
+      .hero-quote p {
+        margin: 0;
+        color: rgba(255, 250, 242, 0.78);
+      }
+
+      .focus-item p {
+        min-width: 0;
+      }
+
+      .focus-item .lang-zh {
+        word-break: keep-all;
+      }
+
+      .hero-quote {
+        padding: 1.25rem 1.5rem;
+      }
+
+      .hero-quote::before {
+        content: "";
+        position: absolute;
+        inset: auto 1.3rem 1.3rem auto;
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 250, 242, 0.1);
+      }
+
+      .quick-links {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 1rem;
+        transform: translateY(50%);
+        margin-top: -1.4rem;
+      }
+
+      .quick-link {
+        padding: 1.2rem 1.15rem;
+        border-radius: 1.25rem;
+        background: rgba(255, 250, 242, 0.95);
+        border: 1px solid rgba(17, 26, 32, 0.08);
+        box-shadow: var(--shadow);
+      }
+
+      .quick-link strong {
+        display: block;
+        font-size: 0.92rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      .quick-link p {
+        margin: 0.55rem 0 0;
+        font-size: 0.98rem;
+        color: var(--copy);
+      }
+
+      .visual-atlas {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .image-card {
+        overflow: hidden;
+        border-radius: 1.4rem;
+        border: 1px solid var(--line);
+        background: rgba(255, 250, 242, 0.92);
+        box-shadow: var(--shadow);
+      }
+
+      .image-card.large {
+        grid-column: span 7;
+      }
+
+      .image-card.tall {
+        grid-column: span 5;
+      }
+
+      .image-card.medium {
+        grid-column: span 4;
+      }
+
+      .image-card.wide {
+        grid-column: span 8;
+      }
+
+      .image-card figure {
+        margin: 0;
+      }
+
+      .image-card img {
+        width: 100%;
+        height: clamp(240px, 28vw, 380px);
+        object-fit: cover;
+        background: #d8cbbb;
+      }
+
+      .image-card.tall img {
+        height: clamp(320px, 42vw, 560px);
+      }
+
+      .image-card.diagram img {
+        object-fit: contain;
+        padding: 1.2rem;
+        background:
+          radial-gradient(circle at 50% 30%, rgba(159, 106, 52, 0.08), transparent 40%),
+          rgba(255, 250, 242, 0.98);
+      }
+
+      .image-copy {
+        padding: 1.1rem 1.15rem 1.2rem;
+      }
+
+      .image-meta {
+        display: inline-flex;
+        margin-bottom: 0.45rem;
+        color: var(--accent);
+        font-size: 0.78rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .image-copy p {
+        margin: 0.65rem 0 0;
+      }
+
+      .bagua-layout {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.98fr);
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .bagua-toggle {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .bagua-stage,
+      .bagua-detail {
+        border-radius: 1.6rem;
+        border: 1px solid var(--line);
+        background: rgba(255, 250, 242, 0.92);
+        box-shadow: var(--shadow);
+      }
+
+      .bagua-stage {
+        position: relative;
+        overflow: hidden;
+        min-height: 44rem;
+        padding: 1.6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        background:
+          radial-gradient(circle at 50% 50%, rgba(159, 106, 52, 0.08), transparent 32%),
+          linear-gradient(180deg, rgba(255, 250, 242, 0.96), rgba(244, 237, 224, 0.92));
+      }
+
+      .bagua-stage::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          repeating-linear-gradient(
+            90deg,
+            rgba(17, 26, 32, 0.025) 0,
+            rgba(17, 26, 32, 0.025) 1px,
+            transparent 1px,
+            transparent 94px
+          ),
+          repeating-linear-gradient(
+            0deg,
+            rgba(17, 26, 32, 0.02) 0,
+            rgba(17, 26, 32, 0.02) 1px,
+            transparent 1px,
+            transparent 94px
+          );
+        pointer-events: none;
+      }
+
+      .bagua-orbit {
+        position: relative;
+        width: min(100%, 40rem);
+        aspect-ratio: 1;
+        margin: 0 auto;
+        flex: 1 1 auto;
+        --bagua-radius: 14rem;
+        border-radius: 50%;
+        background:
+          radial-gradient(circle at 50% 48%, rgba(159, 106, 52, 0.12), transparent 28%),
+          linear-gradient(180deg, rgba(255, 250, 242, 0.98), rgba(242, 234, 220, 0.94));
+        box-shadow:
+          inset 0 0 0 1px rgba(17, 26, 32, 0.08),
+          0 30px 60px rgba(17, 26, 32, 0.08);
+      }
+
+      .bagua-orbit::before,
+      .bagua-orbit::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .bagua-orbit::before {
+        inset: 3.5%;
+        background:
+          radial-gradient(
+            circle at center,
+            rgba(255, 250, 242, 0.96) 0 17%,
+            transparent 17.4% 30.6%,
+            rgba(17, 26, 32, 0.1) 30.6% 31%,
+            transparent 31% 46.2%,
+            rgba(17, 26, 32, 0.1) 46.2% 46.6%,
+            transparent 46.6% 61.8%,
+            rgba(17, 26, 32, 0.1) 61.8% 62.2%,
+            rgba(252, 248, 240, 0.9) 62.2% 100%
+          ),
+          repeating-conic-gradient(
+            from -90deg,
+            rgba(17, 26, 32, 0.08) 0 0.7deg,
+            transparent 0.7deg 45deg
+          );
+        box-shadow: inset 0 0 0 1px rgba(17, 26, 32, 0.08);
+      }
+
+      .bagua-orbit::after {
+        inset: 10%;
+        border: 1px solid rgba(17, 26, 32, 0.12);
+      }
+
+      .bagua-ring {
+        position: absolute;
+        inset: 24%;
+        border-radius: 50%;
+        border: 1px solid rgba(17, 26, 32, 0.11);
+        pointer-events: none;
+      }
+
+      .bagua-center {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 10.5rem;
+        height: 10.5rem;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: #fffaf2;
+        pointer-events: none;
+        z-index: 3;
+        box-shadow:
+          0 18px 38px rgba(17, 26, 32, 0.12),
+          inset 0 0 0 12px rgba(255, 250, 242, 0.7);
+      }
+
+      .bagua-center svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .bagua-note {
+        position: relative;
+        align-self: center;
+        padding: 0.45rem 0.85rem;
+        border-radius: 999px;
+        background: rgba(255, 250, 242, 0.85);
+        border: 1px solid rgba(17, 26, 32, 0.08);
+        color: var(--muted);
+        font-size: 0.9rem;
+        white-space: nowrap;
+        pointer-events: none;
+      }
+
+      .bagua-trigger {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: clamp(5.4rem, 15vw, 7rem);
+        min-height: clamp(6rem, 16vw, 7.6rem);
+        padding: 0.6rem 0.45rem 0.7rem;
+        display: block;
+        border: 1px solid rgba(17, 26, 32, 0.14);
+        clip-path: polygon(18% 0, 82% 0, 100% 100%, 0 100%);
+        background:
+          linear-gradient(180deg, rgba(255, 250, 242, 0.9), rgba(240, 231, 215, 0.92));
+        color: var(--ink);
+        box-shadow:
+          inset 0 0 0 1px rgba(255, 250, 242, 0.5),
+          0 10px 24px rgba(17, 26, 32, 0.06);
+        cursor: pointer;
+        user-select: none;
+        touch-action: manipulation;
+        z-index: 2;
+        transform:
+          translate(-50%, -50%)
+          rotate(var(--angle))
+          translateY(calc(-1 * var(--bagua-radius)));
+        transform-origin: center center;
+        transition:
+          transform 0.2s ease,
+          background-color 0.2s ease,
+          color 0.2s ease,
+          border-color 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .bagua-trigger-content {
+        display: grid;
+        justify-items: center;
+        gap: 0.42rem;
+        text-align: center;
+        transform: rotate(calc(-1 * var(--angle)));
+      }
+
+      .bagua-trigger:hover,
+      .bagua-trigger:focus-visible,
+      #bagua-qian:checked ~ .bagua-stage [data-bagua-trigger="qian"],
+      #bagua-kun:checked ~ .bagua-stage [data-bagua-trigger="kun"],
+      #bagua-zhen:checked ~ .bagua-stage [data-bagua-trigger="zhen"],
+      #bagua-xun:checked ~ .bagua-stage [data-bagua-trigger="xun"],
+      #bagua-kan:checked ~ .bagua-stage [data-bagua-trigger="kan"],
+      #bagua-li:checked ~ .bagua-stage [data-bagua-trigger="li"],
+      #bagua-gen:checked ~ .bagua-stage [data-bagua-trigger="gen"],
+      #bagua-dui:checked ~ .bagua-stage [data-bagua-trigger="dui"],
+      .bagua-trigger.is-active {
+        transform:
+          translate(-50%, -50%)
+          rotate(var(--angle))
+          translateY(calc(-1 * var(--bagua-radius)))
+          scale(1.04);
+        background: linear-gradient(180deg, #15232d, #0d1419);
+        color: #fffaf2;
+        border-color: rgba(17, 26, 32, 0.55);
+        box-shadow:
+          inset 0 0 0 1px rgba(255, 250, 242, 0.12),
+          0 18px 38px rgba(17, 26, 32, 0.16);
+      }
+
+      .bagua-trigger:focus-visible {
+        outline: 2px solid rgba(159, 106, 52, 0.24);
+        outline-offset: 2px;
+      }
+
+      .bagua-char {
+        font-family: var(--font-serif);
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+
+      .bagua-name {
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .trigram {
+        display: grid;
+        gap: 0.26rem;
+        width: 2.7rem;
+      }
+
+      .trigram-line {
+        display: block;
+        height: 0.24rem;
+        border-radius: 999px;
+        background: currentColor;
+      }
+
+      .trigram-line.broken {
+        position: relative;
+        background: transparent;
+      }
+
+      .trigram-line.broken::before,
+      .trigram-line.broken::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 40%;
+        height: 100%;
+        border-radius: 999px;
+        background: currentColor;
+      }
+
+      .trigram-line.broken::after {
+        right: 0;
+      }
+
+      .bagua-detail {
+        min-height: 44rem;
+        padding: 1.7rem;
+      }
+
+      .bagua-overline {
+        display: inline-flex;
+        margin-bottom: 0.8rem;
+        color: var(--accent);
+        font-size: 0.8rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      .bagua-panel {
+        display: none;
+        height: 100%;
+      }
+
+      .bagua-panel.is-active {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      #bagua-qian:checked ~ .bagua-detail [data-bagua-panel="qian"],
+      #bagua-kun:checked ~ .bagua-detail [data-bagua-panel="kun"],
+      #bagua-zhen:checked ~ .bagua-detail [data-bagua-panel="zhen"],
+      #bagua-xun:checked ~ .bagua-detail [data-bagua-panel="xun"],
+      #bagua-kan:checked ~ .bagua-detail [data-bagua-panel="kan"],
+      #bagua-li:checked ~ .bagua-detail [data-bagua-panel="li"],
+      #bagua-gen:checked ~ .bagua-detail [data-bagua-panel="gen"],
+      #bagua-dui:checked ~ .bagua-detail [data-bagua-panel="dui"] {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .bagua-panel-head {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .bagua-panel-head h3 {
+        margin-bottom: 0.35rem;
+      }
+
+      .bagua-panel-head p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .bagua-panel-symbol {
+        width: 5rem;
+        color: var(--ink);
+      }
+
+      .bagua-panel-body p {
+        margin: 0 0 0.95rem;
+      }
+
+      .bagua-facts {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem;
+      }
+
+      .bagua-fact {
+        padding: 0.95rem 1rem;
+        border-radius: 1rem;
+        border: 1px solid rgba(17, 26, 32, 0.08);
+        background: rgba(255, 250, 242, 0.74);
+      }
+
+      .bagua-fact strong {
+        display: block;
+        margin-bottom: 0.3rem;
+        color: var(--ink);
+      }
+
+      .section {
+        padding: 8rem 0;
+      }
+
+      .section-light {
+        background: var(--surface);
+      }
+
+      .section-soft {
+        background: var(--paper);
+      }
+
+      .section-dark {
+        color: rgba(255, 250, 242, 0.88);
+        background:
+          linear-gradient(180deg, rgba(255, 250, 242, 0.02), rgba(255, 250, 242, 0)),
+          var(--ink);
+      }
+
+      .section-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 1.5rem;
+        margin-bottom: 2.6rem;
+      }
+
+      .section-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7rem;
+        margin-bottom: 0.7rem;
+        color: var(--accent);
+        font-size: 0.78rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .section-tag::before {
+        content: "";
+        width: 3rem;
+        height: 1px;
+        background: currentColor;
+      }
+
+      .section-title {
+        font-size: clamp(2.4rem, 4vw, 4rem);
+        line-height: 0.98;
+      }
+
+      .section-copy {
+        max-width: 40rem;
+        margin: 0;
+        font-size: 1.06rem;
+        color: var(--muted);
+      }
+
+      .section-dark .section-copy,
+      .section-dark .event-card p,
+      .section-dark .event-card li,
+      .section-dark .event-meta,
+      .section-dark .event-list p,
+      .section-dark .event-list span {
+        color: rgba(255, 250, 242, 0.72);
+      }
+
+      .section-dark .section-title,
+      .section-dark .card-title,
+      .section-dark .event-card h3,
+      .section-dark .event-list h3 {
+        color: #fffaf2;
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: 2rem;
+        align-items: start;
+      }
+
+      .about-copy p {
+        margin: 0 0 1rem;
+        font-size: 1.06rem;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        margin-top: 1.8rem;
+      }
+
+      .info-card,
+      .agenda-card,
+      .event-card,
+      .event-item,
+      .publication-card,
+      .publication-feature,
+      .track-card,
+      .advisory-card,
+      .contact-card,
+      .form-card {
+        border-radius: 1.4rem;
+        border: 1px solid var(--line);
+        background: rgba(255, 250, 242, 0.92);
+        box-shadow: var(--shadow);
+      }
+
+      .info-card {
+        padding: 1.15rem;
+      }
+
+      .info-card strong {
+        display: block;
+        margin-bottom: 0.45rem;
+        color: var(--ink);
+      }
+
+      .agenda-grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .agenda-card {
+        position: relative;
+        padding: 1.35rem 1.35rem 1.35rem 4.7rem;
+        overflow: hidden;
+      }
+
+      .agenda-card::before {
+        content: attr(data-index);
+        position: absolute;
+        left: 1.2rem;
+        top: 1.1rem;
+        font-family: var(--font-serif);
+        font-size: 2.2rem;
+        line-height: 1;
+        color: rgba(159, 106, 52, 0.24);
+      }
+
+      .agenda-card p,
+      .publication-card p,
+      .publication-feature p,
+      .track-card p,
+      .advisory-card p,
+      .contact-card p,
+      .form-card p {
+        margin: 0.65rem 0 0;
+      }
+
+      .event-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+        gap: 1rem;
+      }
+
+      .event-card,
+      .event-item {
+        padding: 1.4rem;
+        background:
+          linear-gradient(180deg, rgba(255, 250, 242, 0.08), rgba(255, 250, 242, 0.02)),
+          rgba(255, 250, 242, 0.02);
+        border-color: rgba(255, 250, 242, 0.14);
+      }
+
+      .event-date {
+        display: inline-flex;
+        padding: 0.3rem 0.7rem;
+        border-radius: 999px;
+        background: rgba(255, 250, 242, 0.08);
+        color: rgba(255, 250, 242, 0.82);
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .event-card h3,
+      .event-item h3 {
+        margin: 0.85rem 0 0;
+        font-family: var(--font-serif);
+        font-size: 2rem;
+        line-height: 1.06;
+      }
+
+      .event-card p {
+        margin: 0.9rem 0 1rem;
+        font-size: 1.04rem;
+      }
+
+      .event-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem 1.2rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 250, 242, 0.1);
+        font-size: 0.95rem;
+      }
+
+      .event-list {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .event-item h3 {
+        font-size: 1.45rem;
+      }
+
+      .event-item p {
+        margin: 0.65rem 0 0;
+      }
+
+      .publication-layout {
+        display: grid;
+        grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1.1fr);
+        gap: 1rem;
+      }
+
+      .publication-feature {
+        position: relative;
+        overflow: hidden;
+        padding: 1.6rem;
+        background:
+          radial-gradient(circle at 82% 20%, rgba(159, 106, 52, 0.15), transparent 28%),
+          linear-gradient(160deg, rgba(255, 250, 242, 0.92), rgba(235, 224, 207, 0.82));
+      }
+
+      .publication-feature::after {
+        content: "";
+        position: absolute;
+        right: 1.5rem;
+        bottom: 1.5rem;
+        width: 8rem;
+        height: 8rem;
+        border: 1px solid rgba(159, 106, 52, 0.14);
+        border-radius: 50%;
+      }
+
+      .publication-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .publication-card {
+        padding: 1.35rem;
+      }
+
+      .publication-type {
+        display: inline-flex;
+        margin-bottom: 0.55rem;
+        color: var(--accent);
+        font-size: 0.78rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      .fellowship-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+        gap: 1rem;
+        align-items: start;
+      }
+
+      .track-grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .track-card,
+      .advisory-card {
+        padding: 1.35rem;
+      }
+
+      .track-meta {
+        display: inline-flex;
+        margin-bottom: 0.5rem;
+        color: var(--accent);
+        font-size: 0.8rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      .advisory-card {
+        position: relative;
+        overflow: hidden;
+        color: rgba(255, 250, 242, 0.88);
+        background:
+          radial-gradient(circle at 84% 18%, rgba(215, 190, 154, 0.14), transparent 22%),
+          linear-gradient(145deg, #15232d 0%, #1b2730 100%);
+        border-color: rgba(255, 250, 242, 0.12);
+      }
+
+      .advisory-card h3,
+      .advisory-card ul,
+      .advisory-card p {
+        color: rgba(255, 250, 242, 0.84);
+      }
+
+      .advisory-card h3 {
+        color: #fffaf2;
+      }
+
+      .point-list {
+        margin: 1rem 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      .point-list li {
+        position: relative;
+        padding-left: 1.1rem;
+      }
+
+      .point-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.68rem;
+        width: 0.42rem;
+        height: 0.42rem;
+        border-radius: 50%;
+        background: var(--accent-soft);
+      }
+
+      .contact-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+        gap: 1rem;
+      }
+
+      .contact-stack {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .contact-card,
+      .form-card {
+        padding: 1.4rem;
+      }
+
+      .contact-list {
+        display: grid;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .contact-list div {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .contact-list div:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+
+      .contact-list strong {
+        display: block;
+        margin-bottom: 0.28rem;
+        color: var(--ink);
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem;
+        margin-top: 1.25rem;
+      }
+
+      .field {
+        display: grid;
+        gap: 0.38rem;
+      }
+
+      .field.full {
+        grid-column: 1 / -1;
+      }
+
+      .field span {
+        font-size: 0.95rem;
+        color: var(--copy);
+      }
+
+      .field input,
+      .field select,
+      .field textarea {
+        width: 100%;
+        padding: 0.9rem 1rem;
+        border-radius: 1rem;
+        border: 1px solid rgba(17, 26, 32, 0.14);
+        background: var(--surface);
+        color: var(--ink);
+      }
+
+      .field textarea {
+        min-height: 9rem;
+        resize: vertical;
+      }
+
+      .field input:focus,
+      .field select:focus,
+      .field textarea:focus {
+        outline: 2px solid rgba(159, 106, 52, 0.2);
+        border-color: rgba(159, 106, 52, 0.4);
+      }
+
+      .form-foot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .form-note,
+      .form-status {
+        font-size: 0.92rem;
+        color: var(--muted);
+      }
+
+      .footer {
+        padding: 2.2rem 0;
+        color: rgba(255, 250, 242, 0.7);
+        background: #0b1218;
+        border-top: 1px solid rgba(255, 250, 242, 0.08);
+      }
+
+      .footer-grid {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.2rem;
+      }
+
+      .footer-title {
+        color: #fffaf2;
+        font-size: 1.6rem;
+      }
+
+      .footer-copy p {
+        margin: 0.28rem 0 0;
+      }
+
+      .footer-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9rem 1.2rem;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 1080px) {
+        .quick-links {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .hero-grid,
+        .about-grid,
+        .event-layout,
+        .publication-layout,
+        .fellowship-layout,
+        .contact-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .publication-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .visual-atlas {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .image-card.large,
+        .image-card.tall,
+        .image-card.medium,
+        .image-card.wide {
+          grid-column: auto;
+        }
+      }
+
+      @media (max-width: 860px) {
+        .menu-toggle {
+          display: inline-flex;
+        }
+
+        .nav-panel {
+          position: absolute;
+          top: calc(100% + 0.8rem);
+          left: 0;
+          right: 0;
+          z-index: 20;
+          display: none;
+          flex-direction: column;
+          align-items: stretch;
+          padding: 1rem;
+          border-radius: 1.3rem;
+          border: 1px solid var(--line);
+          background: rgba(255, 250, 242, 0.98);
+          box-shadow: var(--shadow);
+        }
+
+        .nav-panel.open {
+          display: flex;
+        }
+
+        .nav-links {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0.2rem;
+        }
+
+        .nav-group {
+          width: 100%;
+        }
+
+        .nav-links > a,
+        .nav-parent {
+          width: 100%;
+          justify-content: space-between;
+          padding: 0.7rem 0;
+        }
+
+        .nav-submenu {
+          position: static;
+          min-width: 0;
+          margin: 0 0 0.35rem;
+          padding: 0.2rem 0 0.2rem 0.9rem;
+          border: 0;
+          border-left: 1px solid rgba(17, 26, 32, 0.1);
+          border-radius: 0;
+          background: transparent;
+          box-shadow: none;
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+          transform: none;
+          display: none;
+        }
+
+        .nav-submenu a {
+          padding: 0.62rem 0;
+          border-radius: 0;
+        }
+
+        .nav-submenu a:hover,
+        .nav-submenu a:focus-visible {
+          background: transparent;
+          color: var(--accent);
+        }
+
+        .nav-group.open .nav-submenu {
+          display: grid;
+        }
+
+        .hero {
+          padding-top: 3.5rem;
+        }
+
+        .hero-stats,
+        .quick-links,
+        .info-grid,
+        .publication-grid,
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .visual-atlas {
+          grid-template-columns: 1fr;
+        }
+
+        .bagua-layout {
+          grid-template-columns: minmax(0, 0.94fr) minmax(260px, 1.06fr);
+          align-items: start;
+        }
+
+        .bagua-stage,
+        .bagua-detail {
+          min-height: auto;
+        }
+
+        .bagua-orbit {
+          width: min(100%, 30rem);
+          --bagua-radius: 10.6rem;
+        }
+
+        .bagua-trigger {
+          width: min(5.9rem, 22vw);
+          min-height: 6.4rem;
+          padding: 0.58rem 0.42rem 0.65rem;
+        }
+
+        .bagua-note {
+          white-space: normal;
+          width: min(90%, 16rem);
+          text-align: center;
+        }
+
+        .section-head,
+        .form-foot,
+        .footer-grid {
+          align-items: start;
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .bagua-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .bagua-note {
+          width: min(100%, 18rem);
+        }
+      }
+
+      @media (max-width: 640px) {
+        .topline {
+          font-size: 0.78rem;
+        }
+
+        .brand-subtitle {
+          letter-spacing: 0.04em;
+          text-transform: none;
+        }
+
+        .section,
+        .hero-grid {
+          padding-bottom: 3rem;
+        }
+
+        .hero h1 {
+          font-size: 2.7rem;
+        }
+
+        .event-card h3 {
+          font-size: 1.7rem;
+        }
+
+        .bagua-orbit {
+          width: min(100%, 24rem);
+          --bagua-radius: 8rem;
+        }
+
+        .bagua-center {
+          width: 7rem;
+          height: 7rem;
+        }
+
+        .bagua-trigger {
+          width: 4.85rem;
+          min-height: 5.25rem;
+          padding: 0.46rem 0.32rem 0.52rem;
+        }
+
+        .bagua-char {
+          font-size: 1.15rem;
+        }
+
+        .bagua-name {
+          font-size: 0.68rem;
+          letter-spacing: 0.08em;
+        }
+
+        .trigram {
+          width: 2.3rem;
+          gap: 0.22rem;
+        }
+
+        .bagua-panel-head,
+        .bagua-facts {
+          grid-template-columns: 1fr;
+        }
+
+        .bagua-panel-head {
+          display: grid;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .reveal,
+        .button,
+        .lang-switch,
+        .menu-toggle,
+        .nav-links > a::after,
+        .nav-parent::after,
+        .nav-caret,
+        .nav-submenu {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body
+    data-lang="zh"
+    data-title-zh="易学与世界文明 | I Ching and World Civilizations"
+    data-title-en="I Ching and World Civilizations"
+  >
+    <header class="site-header">
+      <div class="topline">
+        <div class="container">
+          <span class="lang-zh"
+            >个人独立运营 · 易学研究、文明对话与咨询服务</span
+          >
+          <span class="lang-en"
+            >Independently operated · Zhouyi research, civilizational dialogue, and advisory services</span
+          >
+        </div>
+      </div>
+      <div class="container nav-wrap">
+        <a class="brand" href="#top" aria-label="Site Home">
+          <span class="brand-mark" aria-hidden="true">
+            <span></span>
+            <span class="broken"></span>
+            <span></span>
+          </span>
+          <span class="brand-copy">
+            <span class="brand-title lang-zh">易学与世界文明</span>
+            <span class="brand-title lang-en"
+              >I Ching and World Civilizations</span
+            >
+            <span class="brand-subtitle lang-zh">独立研究与咨询平台</span>
+            <span class="brand-subtitle lang-en"
+              >Independent Research and Advisory Platform</span
+            >
+          </span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-panel"
+        >
+          <span class="lang-zh">菜单</span>
+          <span class="lang-en">Menu</span>
+        </button>
+
+        <div class="nav-panel" id="nav-panel">
+          <nav class="nav-links" aria-label="Main Navigation">
+            <a href="#about">
+              <span class="lang-zh">关于</span>
+              <span class="lang-en">About</span>
+            </a>
+
+            <div class="nav-group">
+              <button
+                class="nav-parent"
+                type="button"
+                data-nav-toggle
+                aria-expanded="false"
+              >
+                <span class="lang-zh">研究</span>
+                <span class="lang-en">Research</span>
+                <span class="nav-caret" aria-hidden="true"></span>
+              </button>
+              <div class="nav-submenu">
+                <a href="research-areas.html">
+                  <span class="lang-zh">研究领域</span>
+                  <span class="lang-en">Research Areas</span>
+                </a>
+                <a href="research-team.html">
+                  <span class="lang-zh">研究团队</span>
+                  <span class="lang-en">Research Team</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="nav-group">
+              <button
+                class="nav-parent"
+                type="button"
+                data-nav-toggle
+                aria-expanded="false"
+              >
+                <span class="lang-zh">活动</span>
+                <span class="lang-en">Events</span>
+                <span class="nav-caret" aria-hidden="true"></span>
+              </button>
+              <div class="nav-submenu">
+                <a href="lectures.html">
+                  <span class="lang-zh">讲座</span>
+                  <span class="lang-en">Lectures</span>
+                </a>
+                <a href="conferences.html">
+                  <span class="lang-zh">会议</span>
+                  <span class="lang-en">Conferences</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="nav-group">
+              <button
+                class="nav-parent"
+                type="button"
+                data-nav-toggle
+                aria-expanded="false"
+              >
+                <span class="lang-zh">出版</span>
+                <span class="lang-en">Publications</span>
+                <span class="nav-caret" aria-hidden="true"></span>
+              </button>
+              <div class="nav-submenu">
+                <a href="journal.html">
+                  <span class="lang-zh">期刊</span>
+                  <span class="lang-en">Journal</span>
+                </a>
+                <a href="books.html">
+                  <span class="lang-zh">图书</span>
+                  <span class="lang-en">Books</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="nav-group">
+              <button
+                class="nav-parent"
+                type="button"
+                data-nav-toggle
+                aria-expanded="false"
+              >
+                <span class="lang-zh">社群</span>
+                <span class="lang-en">Community</span>
+                <span class="nav-caret" aria-hidden="true"></span>
+              </button>
+              <div class="nav-submenu">
+                <a href="guanju-society.html">
+                  <span class="lang-zh">关雎学社</span>
+                  <span class="lang-en">Guanju Society</span>
+                </a>
+                <a href="student-associations.html">
+                  <span class="lang-zh">学生社团</span>
+                  <span class="lang-en">Student Associations</span>
+                </a>
+              </div>
+            </div>
+
+            <a href="#contact">
+              <span class="lang-zh">联系</span>
+              <span class="lang-en">Contact</span>
+            </a>
+          </nav>
+
+          <a class="button nav-cta js-consult-link" href="../consult/zh/index.html">
+            <span class="lang-zh">咨询</span>
+            <span class="lang-en">CONSULT</span>
+          </a>
+
+          <button class="lang-switch" id="lang-switch" type="button">
+            EN
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="reveal">
+            <p class="eyebrow">
+              <span class="lang-zh">学术研究 · 文明对话 · 咨询服务</span>
+              <span class="lang-en"
+                >Scholarship · Civilizational Dialogue · Advisory Services</span
+              >
+            </p>
+            <h1>
+              <span class="lang-zh">易学与世界文明</span>
+              <span class="lang-en">I Ching and World Civilizations</span>
+            </h1>
+            <p class="hero-deck">
+              <span class="lang-zh"
+                >以《周易》为核心研究对象，贯通中国经典体系，并面向世界文明语境推进纵向溯源与横向互鉴。</span
+              >
+              <span class="lang-en"
+                >Centered on the Zhouyi, the site connects Chinese classical
+                traditions with world civilizations through textual inquiry,
+                comparative interpretation, and bilingual public engagement.</span
+              >
+            </p>
+            <p class="hero-body">
+              <span class="lang-zh"
+                >本网站由个人独立运营，围绕《周易》展开研究、传播与咨询工作，兼顾学术写作、项目合作与面向国际语境的公共表达。</span
+              >
+              <span class="lang-en"
+                >This website is independently operated and devoted to Zhouyi research, public communication, project collaboration, and internationally oriented advisory work.</span
+              >
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#about">
+                <span class="lang-zh">了解本站</span>
+                <span class="lang-en">About the Site</span>
+              </a>
+              <a class="button button-secondary js-consult-link" href="../consult/zh/index.html">
+                <span class="lang-zh">咨询</span>
+                <span class="lang-en">CONSULT</span>
+              </a>
+            </div>
+
+            <ul class="hero-stats">
+              <li>
+                <strong>2026</strong>
+                <span class="lang-zh">项目启动时间</span>
+                <span class="lang-en">Project Launch</span>
+              </li>
+              <li>
+                <strong>ZH / EN</strong>
+                <span class="lang-zh">双语面向世界</span>
+                <span class="lang-en">Bilingual Global Reach</span>
+              </li>
+              <li>
+                <strong>3</strong>
+                <span class="lang-zh">核心研究主线</span>
+                <span class="lang-en">Core Research Tracks</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-aside reveal">
+            <article class="panel hero-panel">
+              <span class="panel-kicker">
+                <span class="lang-zh">研究焦点</span>
+                <span class="lang-en">Research Focus</span>
+              </span>
+              <h2>
+                <span class="lang-zh">三条学术主线</span>
+                <span class="lang-en">Three Academic Lines</span>
+              </h2>
+              <div class="hexagram" aria-hidden="true">
+                <span></span>
+                <span class="broken"></span>
+                <span></span>
+                <span class="broken"></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="focus-list">
+                <div class="focus-item">
+                  <span>I</span>
+                  <p>
+                    <span class="lang-zh"
+                      >比勘传世文本与出土文献，建立《周易》文本研究的可靠基础。</span
+                    >
+                    <span class="lang-en"
+                      >Compare received texts and excavated manuscripts to
+                      establish a secure textual basis for Zhouyi studies.</span
+                    >
+                  </p>
+                </div>
+                <div class="focus-item">
+                  <span>II</span>
+                  <p>
+                    <span class="lang-zh"
+                      >将《周易》置于中国经典整体结构中理解其枢纽地位。</span
+                    >
+                    <span class="lang-en"
+                      >Interpret the Zhouyi within the wider constellation of
+                      Chinese classics.</span
+                    >
+                  </p>
+                </div>
+                <div class="focus-item">
+                  <span>III</span>
+                  <p>
+                    <span class="lang-zh"
+                      >推动易学与自然法、荣格心理学及海外译介研究的跨文明对话。</span
+                    >
+                    <span class="lang-en"
+                      >Advance cross-civilizational dialogue with natural law,
+                      Jungian studies, and global reception history.</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="panel hero-quote">
+              <span class="panel-kicker">
+                <span class="lang-zh">网站使命</span>
+                <span class="lang-en">Mission</span>
+              </span>
+              <p>
+                <span class="lang-zh"
+                  >立足文本考辨，贯通中国经典体系，并在世界文明语境中重建《周易》的学术解释力与公共传播力。</span
+                >
+                <span class="lang-en"
+                  >Grounded in textual scholarship, the site re-situates the
+                  Zhouyi within Chinese classics and renews its interpretive and
+                  public significance in a global civilizational context.</span
+                >
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="container quick-links reveal">
+          <a class="quick-link" href="#about">
+            <strong class="lang-zh">关于本站</strong>
+            <strong class="lang-en">About</strong>
+            <p class="lang-zh">网站定位、使命与研究议程</p>
+            <p class="lang-en">Platform profile, mission, and research agenda</p>
+          </a>
+          <a class="quick-link" href="#events">
+            <strong class="lang-zh">活动</strong>
+            <strong class="lang-en">Events</strong>
+            <p class="lang-zh">论坛、工作坊与国际对话</p>
+            <p class="lang-en">Forums, workshops, and international dialogue</p>
+          </a>
+          <a class="quick-link" href="#publications">
+            <strong class="lang-zh">出版</strong>
+            <strong class="lang-en">Publications</strong>
+            <p class="lang-zh">工作论文、译介与研究成果</p>
+            <p class="lang-en">Working papers, translations, and research outputs</p>
+          </a>
+          <a class="quick-link" href="#fellowship">
+            <strong class="lang-zh">驻访计划</strong>
+            <strong class="lang-en">Fellowship</strong>
+            <p class="lang-zh">驻访计划与学术共同体建设</p>
+            <p class="lang-en">Visiting programs and scholarly community building</p>
+          </a>
+          <a class="quick-link" href="#contact">
+            <strong class="lang-zh">联系</strong>
+            <strong class="lang-en">Contact</strong>
+            <p class="lang-zh">合作洽谈、讲座邀请与咨询联络</p>
+            <p class="lang-en">Partnership, lecture invitations, and consulting</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="section section-light" id="about">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="section-tag">
+                <span class="lang-zh">关于本站</span>
+                <span class="lang-en">About</span>
+              </div>
+              <h2 class="section-title">
+                <span class="lang-zh"
+                  >以《周易》为轴心，在中国经典与世界文明之间建立学术坐标</span
+                >
+                <span class="lang-en"
+                  >Positioning the Zhouyi between Chinese classics and world
+                  civilizations</span
+                >
+              </h2>
+            </div>
+            <p class="section-copy">
+              <span class="lang-zh"
+                >这是一个围绕《周易》展开研究、写作、传播与咨询的个人网站，强调严格的文本基础与开放的国际视野。</span
+              >
+              <span class="lang-en"
+                >This is an independently operated site for Zhouyi studies,
+                combining research, publication, public programming, and
+                advisory work with rigorous textual foundations and an open
+                international outlook.</span
+              >
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-copy reveal">
+              <p class="lang-zh">
+                本网站自2026年1月启动，由个人独立运营，专注于《周易》的文本、思想与传播研究。它以《周易》为核心对象，立足文本考辨，贯通中国经典体系，并面向世界文明语境推进易学研究的纵向溯源与横向互鉴。
+              </p>
+              <p class="lang-en">
+                Launched in January 2026, this independently operated scholarly
+                and advisory site is devoted to the textual, intellectual, and
+                communicative study of the Zhouyi. It combines textual
+                criticism, classical cross-reading, and dialogue with world
+                civilizations.
+              </p>
+              <p class="lang-zh">
+                除学术研究之外，网站也延伸至讲座策划、出版传播、国际对话以及专题咨询，适合承接高校、出版社、文化机构与企业的合作项目。
+              </p>
+              <p class="lang-en">
+                Beyond scholarship, the site also supports lecture curation,
+                publication strategy, international exchange, and advisory
+                collaboration for universities, publishers, cultural
+                institutions, and enterprises.
+              </p>
+
+              <div class="info-grid">
+                <div class="info-card">
+                  <strong class="lang-zh">成立时间</strong>
+                  <strong class="lang-en">Founded</strong>
+                  <span class="lang-zh">2026年1月</span>
+                  <span class="lang-en">January 2026</span>
+                </div>
+                <div class="info-card">
+                  <strong class="lang-zh">平台性质</strong>
+                  <strong class="lang-en">Platform Type</strong>
+                  <span class="lang-zh">个人独立运营</span>
+                  <span class="lang-en">Independently operated</span>
+                </div>
+                <div class="info-card">
+                  <strong class="lang-zh">工作语言</strong>
+                  <strong class="lang-en">Languages</strong>
+                  <span class="lang-zh">中文 / English</span>
+                  <span class="lang-en">Chinese / English</span>
+                </div>
+                <div class="info-card">
+                  <strong class="lang-zh">服务面向</strong>
+                  <strong class="lang-en">Scope</strong>
+                  <span class="lang-zh">研究、出版、活动与咨询</span>
+                  <span class="lang-en"
+                    >Research, publications, events, and advisory services</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="agenda-grid reveal">
+              <article class="agenda-card" data-index="01">
+                <h3 class="card-title">
+                  <span class="lang-zh">《周易》的文本研究</span>
+                  <span class="lang-en">Textual Research on the Zhouyi</span>
+                </h3>
+                <p class="lang-zh">
+                  系统比勘《周易》传世文本与出土文献，如马王堆帛书、阜阳汉简及上博楚简等，厘清《周易》文本形成与演变的历史脉络，为易学研究提供可靠的文本基础。
+                </p>
+                <p class="lang-en">
+                  The site compares received editions of the Zhouyi with
+                  excavated witnesses such as the Mawangdui silk manuscripts,
+                  Fuyang Han slips, and Shanghai Museum Chu slips in order to
+                  reconstruct the text's formation and transformation.
+                </p>
+              </article>
+              <article class="agenda-card" data-index="02">
+                <h3 class="card-title">
+                  <span class="lang-zh">《周易》与其他经典的相互参照</span>
+                  <span class="lang-en"
+                    >The Zhouyi in Relation to Other Classics</span
+                  >
+                </h3>
+                <p class="lang-zh">
+                  将《周易》置于传统思想的整体结构中加以考察，通过与《尚书》政治哲学、《诗经》文学情感及《黄帝内经》生命观念的相互参照，探讨其在中华文明谱系中的枢纽地位与综合特征。
+                </p>
+                <p class="lang-en">
+                  The Zhouyi is examined within the wider architecture of
+                  Chinese thought through sustained comparison with the political
+                  philosophy of the Shangshu, the literary sensibility of the
+                  Shijing, and the life concepts of the Huangdi Neijing.
+                </p>
+              </article>
+              <article class="agenda-card" data-index="03">
+                <h3 class="card-title">
+                  <span class="lang-zh">《周易》与其他文明的交流互鉴</span>
+                  <span class="lang-en"
+                    >The Zhouyi and Inter-Civilizational Exchange</span
+                  >
+                </h3>
+                <p class="lang-zh">
+                  开展《周易》与自然法传统的比较研究，重视《周易》与荣格分析心理学的跨学科研究，关注海外学界对《周易》的译介和诠释，促进易学跨语际对话与文明交流互鉴。
+                </p>
+                <p class="lang-en">
+                  The site pursues comparative work with natural law
+                  traditions, interdisciplinary dialogue with Jungian analytical
+                  psychology, and close attention to translation, reception, and
+                  interpretation in overseas scholarship.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="section-tag">
+                <span class="lang-zh">文献与图像</span>
+                <span class="lang-en">Texts and Images</span>
+              </div>
+              <h2 class="section-title">
+                <span class="lang-zh">以图像化的方式呈现《周易》研究的材料感</span>
+                <span class="lang-en"
+                  >Bringing the material world of Zhouyi studies into view</span
+                >
+              </h2>
+            </div>
+            <p class="section-copy">
+              <span class="lang-zh"
+                >除了文字说明，首页增加了更强的文献图像层次，用帛书、竹简与图式穿插页面结构，让网站在保持学术性时更有视觉密度。</span
+              >
+              <span class="lang-en"
+                >Alongside textual explanation, the site now uses manuscript,
+                bamboo-slip, and diagram imagery to create a richer scholarly
+                atmosphere without losing institutional clarity.</span
+              >
+            </p>
+          </div>
+
+          <div class="visual-atlas">
+            <article class="image-card large reveal">
+              <figure>
+                <img
+                  src="https://commons.wikimedia.org/wiki/Special:FilePath/Mawangdui_Silk_Texts_1.JPG"
+                  alt="Mawangdui silk texts"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+              </figure>
+              <div class="image-copy">
+                <span class="image-meta">
+                  <span class="lang-zh">帛书文献</span>
+                  <span class="lang-en">Silk Manuscripts</span>
+                </span>
+                <h3 class="card-title">
+                  <span class="lang-zh">马王堆帛书所代表的材料传统</span>
+                  <span class="lang-en"
+                    >The manuscript horizon represented by Mawangdui</span
+                  >
+                </h3>
+                <p class="lang-zh">
+                  帛书与出土文献构成《周易》文本研究的重要材料背景，也为本站的文本比勘与历史溯源提供了真实的物质依据。
+                </p>
+                <p class="lang-en">
+                  Silk manuscripts and excavated witnesses form the material
+                  background for Zhouyi textual studies and ground the site's
+                  work in concrete historical evidence.
+                </p>
+              </div>
+            </article>
+
+            <article class="image-card tall reveal">
+              <figure>
+                <img
+                  src="https://commons.wikimedia.org/wiki/Special:FilePath/Yinshu.png"
+                  alt="Ancient Chinese manuscript diagram"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+              </figure>
+              <div class="image-copy">
+                <span class="image-meta">
+                  <span class="lang-zh">简帛结构</span>
+                  <span class="lang-en">Slip and Codex Forms</span>
+                </span>
+                <h3 class="card-title">
+                  <span class="lang-zh">简帛、写本与早期知识形态</span>
+                  <span class="lang-en"
+                    >Slip manuscripts and early forms of knowledge</span
+                  >
+                </h3>
+                <p class="lang-zh">
+                  网站以材料学的视觉线索辅助表达研究方向，避免首页只有“网站说明”，而缺少研究对象本身的存在感。
+                </p>
+                <p class="lang-en">
+                  Material images give the research object itself a visible
+                  presence, so the homepage reads as more than platform
+                  description alone.
+                </p>
+              </div>
+            </article>
+
+            <article class="image-card medium diagram reveal">
+              <figure>
+                <img
+                  src="https://commons.wikimedia.org/wiki/Special:FilePath/Bagua_trigrams.svg"
+                  alt="Bagua trigrams diagram"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+              </figure>
+              <div class="image-copy">
+                <span class="image-meta">
+                  <span class="lang-zh">图式元素</span>
+                  <span class="lang-en">Diagrammatic Forms</span>
+                </span>
+                <h3 class="card-title">
+                  <span class="lang-zh">卦象、图式与视觉秩序</span>
+                  <span class="lang-en">Hexagrams, diagrams, and visual order</span>
+                </h3>
+                <p class="lang-zh">
+                  将卦象和图式转化为页面语言，有助于在学术网站中建立识别度，而不是使用泛化的模板视觉。
+                </p>
+                <p class="lang-en">
+                  Translating trigram and diagram logic into interface language
+                  helps the site feel specific to the Zhouyi rather than merely
+                  generic.
+                </p>
+              </div>
+            </article>
+
+            <article class="image-card wide reveal">
+              <figure>
+                <img
+                  src="https://commons.wikimedia.org/wiki/Special:FilePath/Silk_from_Mawangdui.jpg"
+                  alt="Silk manuscript from Mawangdui"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+              </figure>
+              <div class="image-copy">
+                <span class="image-meta">
+                  <span class="lang-zh">研究现场</span>
+                  <span class="lang-en">Research Materials</span>
+                </span>
+                <h3 class="card-title">
+                  <span class="lang-zh">让宣传网页同时具备材料感与学术现场感</span>
+                  <span class="lang-en"
+                    >Making the site feel both material and scholarly</span
+                  >
+                </h3>
+                <p class="lang-zh">
+                  这一组图像可以在后续继续替换为你自己的讲座照片、活动现场、馆藏图片或出版物封面，形成更真实的网站形象。
+                </p>
+                <p class="lang-en">
+                  These image areas can later be replaced by your own lecture
+                  photos, event documentation, collection images, or book
+                  covers to build a more distinctive site identity.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="events">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="section-tag">
+                <span class="lang-zh">活动</span>
+                <span class="lang-en">Events</span>
+              </div>
+              <h2 class="section-title">
+                <span class="lang-zh"
+                  >以论坛、工作坊与国际对话形成公共学术平台</span
+                >
+                <span class="lang-en"
+                  >Building a public academic platform through forums,
+                  workshops, and international dialogue</span
+                >
+              </h2>
+            </div>
+            <p class="section-copy">
+              <span class="lang-zh"
+                >活动栏目适合展示网站策划的论坛、闭门研讨、国际圆桌与合作讲座。以下内容可作为首版页面的策展式示例，后续替换为真实活动信息即可。</span
+              >
+              <span class="lang-en"
+                >This section is designed for public forums, closed seminars,
+                international roundtables, and partner lectures. The current
+                content works as an inaugural editorial layout and can be
+                replaced later with live event data.</span
+              >
+            </p>
+          </div>
+
+          <div class="event-layout">
+            <article class="event-card reveal">
+              <span class="event-date">16 May 2026</span>
+              <h3>
+                <span class="lang-zh"
+                  >项目启动论坛：《周易》文本、思想与世界文明</span
+                >
+                <span class="lang-en"
+                  >Inaugural Forum: The Zhouyi, Textual History, and World
+                  Civilizations</span
+                >
+              </h3>
+              <p class="lang-zh">
+                围绕《周易》文本研究、经典参照与跨文明阐释三条主线，组织一场兼具学术密度与公共传播能力的启动性论坛，呈现网站整体研究方向。
+              </p>
+              <p class="lang-en">
+                An inaugural forum structured around textual scholarship,
+                classical cross-reference, and cross-civilizational
+                interpretation, introducing the site's overall research
+                agenda.
+              </p>
+              <div class="event-meta">
+                <span class="lang-zh">地点：上海</span>
+                <span class="lang-en">Venue: Shanghai</span>
+                <span class="lang-zh">形式：线下 + 双语传播</span>
+                <span class="lang-en">Format: In-person + bilingual outreach</span>
+              </div>
+            </article>
+
+            <div class="event-list">
+              <article class="event-item reveal">
+                <span class="event-date">21 Jun 2026</span>
+                <h3>
+                  <span class="lang-zh">出土文献与《周易》文本工作坊</span>
+                  <span class="lang-en"
+                    >Workshop on Excavated Manuscripts and the Zhouyi Text</span
+                  >
+                </h3>
+                <p class="lang-zh">
+                  聚焦马王堆帛书、阜阳汉简与上博楚简的比勘方法和文本意义。
+                </p>
+                <p class="lang-en">
+                  Focusing on methods and implications for comparing Mawangdui,
+                  Fuyang, and Shanghai Museum manuscript witnesses.
+                </p>
+              </article>
+
+              <article class="event-item reveal">
+                <span class="event-date">19 Jul 2026</span>
+                <h3>
+                  <span class="lang-zh">《周易》与《尚书》《诗经》《内经》研讨会</span>
+                  <span class="lang-en"
+                    >Seminar on the Zhouyi with the Shangshu, Shijing, and
+                    Neijing</span
+                  >
+                </h3>
+                <p class="lang-zh">
+                  通过经典互证重新理解《周易》在中华文明谱系中的结构位置。
+                </p>
+                <p class="lang-en">
+                  Reconsidering the structural place of the Zhouyi within the
+                  Chinese civilizational canon through cross-reading.
+                </p>
+              </article>
+
+              <article class="event-item reveal">
+                <span class="event-date">13 Sep 2026</span>
+                <h3>
+                  <span class="lang-zh">《周易》、自然法与荣格心理学国际圆桌</span>
+                  <span class="lang-en"
+                    >International Roundtable on the Zhouyi, Natural Law, and
+                    Jungian Psychology</span
+                  >
+                </h3>
+                <p class="lang-zh">
+                  面向海外学界与跨学科研究者，推动易学比较研究的国际合作。
+                </p>
+                <p class="lang-en">
+                  A cross-disciplinary conversation aimed at international
+                  scholars and new comparative collaborations.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="publications">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="section-tag">
+                <span class="lang-zh">出版</span>
+                <span class="lang-en">Publications</span>
+              </div>
+              <h2 class="section-title">
+                <span class="lang-zh">围绕文本、诠释与比较研究建立出版矩阵</span>
+                <span class="lang-en"
+                  >Building a publication program around texts,
+                  interpretation, and comparative inquiry</span
+                >
+              </h2>
+            </div>
+            <p class="section-copy">
+              <span class="lang-zh"
+                >出版栏目可展示工作论文、研究通讯、译介成果、评论文章与会议文集，形成兼具学术深度与对外传播能力的内容体系。</span
+              >
+              <span class="lang-en"
+                >The publications section can host working papers, research
+                bulletins, translations, review essays, and conference
+                proceedings, creating an output program that is both scholarly
+                and outward-facing.</span
+              >
+            </p>
+          </div>
+
+          <div class="publication-layout">
+            <article class="publication-feature reveal">
+              <span class="publication-type">
+                <span class="lang-zh">重点栏目</span>
+                <span class="lang-en">Featured Program</span>
+              </span>
+              <h3>
+                <span class="lang-zh">出版体系</span>
+                <span class="lang-en">Publication Program</span>
+              </h3>
+              <p class="lang-zh">
+                首版前端采用编辑型展示结构，适合后续接入真实论文、书评、译介、活动文集与年度报告。界面上已经为“学术系列 + 对外传播”两类内容预留了呈现方式。
+              </p>
+              <p class="lang-en">
+                The first version uses an editorial presentation that can later
+                accommodate live papers, reviews, translations, proceedings, and
+                annual reports. It is structured to support both scholarly
+                series and public-facing communication.
+              </p>
+              <div class="hero-actions">
+                <a class="button button-primary" href="#contact">
+                  <span class="lang-zh">规划出版栏目</span>
+                  <span class="lang-en">Plan the Publication Series</span>
+                </a>
+              </div>
+            </article>
+
+            <div class="publication-grid">
+              <article class="publication-card reveal">
+                <span class="publication-type">
+                  <span class="lang-zh">工作论文</span>
+                  <span class="lang-en">Working Paper</span>
+                </span>
+                <h3 class="card-title">
+                  <span class="lang-zh">工作论文系列</span>
+                  <span class="lang-en">Working Paper Series</span>
+                </h3>
+                <p class="lang-zh">
+                  发布文本考辨、出土文献比勘、理论问题讨论等阶段性研究成果。
+                </p>
+                <p class="lang-en">
+                  For preliminary studies in textual criticism, excavated
+                  manuscripts, and theoretical questions.
+                </p>
+              </article>
+
+              <article class="publication-card reveal">
+                <span class="publication-type">
+                  <span class="lang-zh">文本校勘</span>
+                  <span class="lang-en">Critical Edition</span>
+                </span>
+                <h3 class="card-title">
+                  <span class="lang-zh">文本整理与校勘</span>
+                  <span class="lang-en">Textual Notes and Editions</span>
+                </h3>
+                <p class="lang-zh">
+                  展示《周易》传世文本与出土文献相关的校勘笔记、文献说明与版本比较。
+                </p>
+                <p class="lang-en">
+                  For editorial notes, manuscript descriptions, and comparative
+                  studies of transmitted and excavated witnesses.
+                </p>
+              </article>
+
+              <article class="publication-card reveal">
+                <span class="publication-type">
+                  <span class="lang-zh">比较研究</span>
+                  <span class="lang-en">Comparative Study</span>
+                </span>
+                <h3 class="card-title">
+                  <span class="lang-zh">比较文明研究</span>
+                  <span class="lang-en">Comparative Civilization Studies</span>
+                </h3>
+                <p class="lang-zh">
+                  面向《周易》与自然法、分析心理学及其他世界思想传统的比较研究。
+                </p>
+                <p class="lang-en">
+                  Dedicated to comparative studies between the Zhouyi and other
+                  intellectual traditions such as natural law and analytical
+                  psychology.
+                </p>
+              </article>
+
+              <article class="publication-card reveal">
+                <span class="publication-type">
+                  <span class="lang-zh">海外译介</span>
+                  <span class="lang-en">Translation</span>
+                </span>
+                <h3 class="card-title">
+                  <span class="lang-zh">海外译介与接受史</span>
+                  <span class="lang-en">Translation and Reception History</span>
+                </h3>
+                <p class="lang-zh">
+                  收纳海外学界对《周易》的译介、阐释与评论，为国际传播提供知识底座。
+                </p>
+                <p class="lang-en">
+                  A space for translation history, interpretation, and critical
+                  reception of the Zhouyi in global scholarship.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light" id="fellowship">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="section-tag">
+                <span class="lang-zh">驻访计划</span>
+                <span class="lang-en">Fellowship</span>
+              </div>
+              <h2 class="section-title">
+                <span class="lang-zh">以驻访、译介与合作项目搭建研究共同体</span>
+                <span class="lang-en"
+                  >Building a scholarly community through residencies,
+                  translation, and collaborative projects</span
+                >
+              </h2>
+            </div>
+            <p class="section-copy">
+              <span class="lang-zh"
+                >Fellowship 栏目适合展示访问学者计划、青年学者培养、翻译项目和合作驻访。它也可以与本站的咨询和传播业务形成联动。</span
+              >
+              <span class="lang-en"
+                >The fellowship section is suited to visiting scholar programs,
+                early-career training, translation projects, and institutional
+                residencies. It can also intersect with the site's advisory
+                and communication work.</span
+              >
+            </p>
+          </div>
+
+          <div class="fellowship-layout">
+            <div class="track-grid reveal">
+              <article class="track-card">
+                <span class="track-meta">
+                  <span class="lang-zh">访问学者</span>
+                  <span class="lang-en">Visiting Fellows</span>
+                </span>
+                <h3 class="card-title">
+                  <span class="lang-zh">访问学者计划</span>
+                  <span class="lang-en">Visiting Scholar Fellowship</span>
+                </h3>
+                <p class="lang-zh">
+                  面向国内外研究者开放短期或阶段性驻访，围绕《周易》文本、诠释史和比较研究开展合作。
+                </p>
+                <p class="lang-en">
+                  Short-term and project-based residencies for scholars working
+                  on the Zhouyi, its commentarial traditions, and comparative
+                  civilizational themes.
+                </p>
+              </article>
+
+              <article class="track-card">
+                <span class="track-meta">
+                  <span class="lang-zh">译介计划</span>
+                  <span class="lang-en">Translation Track</span>
+                </span>
+                <h3 class="card-title">
+                  <span class="lang-zh">译介与写作支持</span>
+                  <span class="lang-en">Translation and Writing Support</span>
+                </h3>
+                <p class="lang-zh">
+                  面向双语写作者、译者和编辑，推进《周易》研究成果的英译、国际表达与出版准备。
+                </p>
+                <p class="lang-en">
+                  Designed for bilingual writers, translators, and editors who
+                  can help prepare Zhouyi research for global publication and
+                  communication.
+                </p>
+              </article>
+
+              <article class="track-card">
+                <span class="track-meta">
+                  <span class="lang-zh">青年学者</span>
+                  <span class="lang-en">Emerging Scholars</span>
+                </span>
+                <h3 class="card-title">
+                  <span class="lang-zh">学生与青年学者培养</span>
+                  <span class="lang-en">Students and Early-Career Scholars</span>
+                </h3>
+                <p class="lang-zh">
+                  通过读书会、写作工作坊和研究辅助训练，建立稳定的青年学术共同体。
+                </p>
+                <p class="lang-en">
+                  Reading groups, writing workshops, and research-assistant
+                  training designed to build an emerging scholarly community.
+                </p>
+              </article>
+            </div>
+
+            <article class="advisory-card reveal">
+              <span class="panel-kicker">
+                <span class="lang-zh">咨询合作</span>
+                <span class="lang-en">Advisory</span>
+              </span>
+              <h3>
+                <span class="lang-zh">面向高校、出版社与合作方的研究支持</span>
+                <span class="lang-en"
+                  >Research support for universities, publishers, and partner
+                  organizations</span
+                >
+              </h3>
+              <p class="lang-zh">
+                除 fellowship 外，网站也可提供双语学术策展、经典主题讲座、跨文化传播方案和研究内容咨询，适合教育机构、文化品牌、出版社和国际项目合作。
+              </p>
+              <p class="lang-en">
+                Beyond fellowship programs, the site can provide bilingual
+                academic curation, theme lectures, cross-cultural communication
+                planning, and research consulting for educational institutions,
+                cultural brands, publishers, and international projects.
+              </p>
+              <ul class="point-list">
+                <li>
+                  <span class="lang-zh">双语学术与品牌内容策划</span>
+                  <span class="lang-en"
+                    >Bilingual academic and brand-content strategy</span
+                  >
+                </li>
+                <li>
+                  <span class="lang-zh">经典中国与世界文明主题讲座</span>
+                  <span class="lang-en"
+                    >Lectures on Chinese classics and world civilizations</span
+                  >
+                </li>
+                <li>
+                  <span class="lang-zh">国际传播与跨文化培训</span>
+                  <span class="lang-en"
+                    >International communication and intercultural training</span
+                  >
+                </li>
+                <li>
+                  <span class="lang-zh">研究资料整理与出版咨询</span>
+                  <span class="lang-en"
+                    >Research documentation and publication consulting</span
+                  >
+                </li>
+              </ul>
+              <div class="hero-actions">
+                <a class="button button-secondary" href="#contact">
+                  <span class="lang-zh">发起咨询</span>
+                  <span class="lang-en">Start an Inquiry</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light" id="bagua-interactive">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="section-tag">
+                <span class="lang-zh">交互八卦</span>
+                <span class="lang-en">Interactive Bagua</span>
+              </div>
+              <h2 class="section-title">
+                <span class="lang-zh">在八卦图中悬停，查看卦象的图像与解释</span>
+                <span class="lang-en"
+                  >Hover across the Bagua to explore each trigram and its
+                  interpretation</span
+                >
+              </h2>
+            </div>
+            <p class="section-copy">
+              <span class="lang-zh"
+                >这一模块放在宣传页靠下位置，位于咨询模块上方。桌面端可悬停查看，移动端可点击切换；中间保留太极两仪，旁侧显示卦象解释与学术提示。</span
+              >
+              <span class="lang-en"
+                >Placed near the lower part of the promotional page, just above
+                the inquiry section, this module keeps the Taiji at the center
+                and reveals trigram-specific interpretation in the adjacent
+                panel.</span
+              >
+            </p>
+          </div>
+
+          <div class="bagua-layout js-bagua" data-bagua-default="qian">
+            <input
+              class="bagua-toggle"
+              type="radio"
+              name="bagua-panel"
+              id="bagua-qian"
+              data-bagua-input="qian"
+              checked
+            />
+            <input
+              class="bagua-toggle"
+              type="radio"
+              name="bagua-panel"
+              id="bagua-kun"
+              data-bagua-input="kun"
+            />
+            <input
+              class="bagua-toggle"
+              type="radio"
+              name="bagua-panel"
+              id="bagua-zhen"
+              data-bagua-input="zhen"
+            />
+            <input
+              class="bagua-toggle"
+              type="radio"
+              name="bagua-panel"
+              id="bagua-xun"
+              data-bagua-input="xun"
+            />
+            <input
+              class="bagua-toggle"
+              type="radio"
+              name="bagua-panel"
+              id="bagua-kan"
+              data-bagua-input="kan"
+            />
+            <input
+              class="bagua-toggle"
+              type="radio"
+              name="bagua-panel"
+              id="bagua-li"
+              data-bagua-input="li"
+            />
+            <input
+              class="bagua-toggle"
+              type="radio"
+              name="bagua-panel"
+              id="bagua-gen"
+              data-bagua-input="gen"
+            />
+            <input
+              class="bagua-toggle"
+              type="radio"
+              name="bagua-panel"
+              id="bagua-dui"
+              data-bagua-input="dui"
+            />
+
+            <div class="bagua-stage reveal">
+              <div class="bagua-orbit">
+                <div class="bagua-ring" aria-hidden="true"></div>
+
+                <label
+                  class="bagua-trigger"
+                  data-bagua-trigger="qian"
+                  for="bagua-qian"
+                  role="button"
+                  tabindex="0"
+                  aria-pressed="false"
+                  aria-controls="bagua-panel-qian"
+                  style="--angle: -135deg"
+                >
+                  <span class="bagua-trigger-content">
+                    <span class="bagua-char">乾</span>
+                    <span class="trigram" aria-hidden="true">
+                      <span class="trigram-line"></span>
+                      <span class="trigram-line"></span>
+                      <span class="trigram-line"></span>
+                    </span>
+                    <span class="bagua-name">
+                      <span class="lang-zh">天</span>
+                      <span class="lang-en">Heaven</span>
+                    </span>
+                  </span>
+                </label>
+
+                <label
+                  class="bagua-trigger"
+                  data-bagua-trigger="li"
+                  for="bagua-li"
+                  role="button"
+                  tabindex="0"
+                  aria-pressed="false"
+                  aria-controls="bagua-panel-li"
+                  style="--angle: -90deg"
+                >
+                  <span class="bagua-trigger-content">
+                    <span class="bagua-char">离</span>
+                    <span class="trigram" aria-hidden="true">
+                      <span class="trigram-line"></span>
+                      <span class="trigram-line broken"></span>
+                      <span class="trigram-line"></span>
+                    </span>
+                    <span class="bagua-name">
+                      <span class="lang-zh">火</span>
+                      <span class="lang-en">Fire</span>
+                    </span>
+                  </span>
+                </label>
+
+                <label
+                  class="bagua-trigger"
+                  data-bagua-trigger="xun"
+                  for="bagua-xun"
+                  role="button"
+                  tabindex="0"
+                  aria-pressed="false"
+                  aria-controls="bagua-panel-xun"
+                  style="--angle: -45deg"
+                >
+                  <span class="bagua-trigger-content">
+                    <span class="bagua-char">巽</span>
+                    <span class="trigram" aria-hidden="true">
+                      <span class="trigram-line"></span>
+                      <span class="trigram-line"></span>
+                      <span class="trigram-line broken"></span>
+                    </span>
+                    <span class="bagua-name">
+                      <span class="lang-zh">风</span>
+                      <span class="lang-en">Wind</span>
+                    </span>
+                  </span>
+                </label>
+
+                <label
+                  class="bagua-trigger"
+                  data-bagua-trigger="zhen"
+                  for="bagua-zhen"
+                  role="button"
+                  tabindex="0"
+                  aria-pressed="false"
+                  aria-controls="bagua-panel-zhen"
+                  style="--angle: 180deg"
+                >
+                  <span class="bagua-trigger-content">
+                    <span class="bagua-char">震</span>
+                    <span class="trigram" aria-hidden="true">
+                      <span class="trigram-line broken"></span>
+                      <span class="trigram-line broken"></span>
+                      <span class="trigram-line"></span>
+                    </span>
+                    <span class="bagua-name">
+                      <span class="lang-zh">雷</span>
+                      <span class="lang-en">Thunder</span>
+                    </span>
+                  </span>
+                </label>
+
+                <label
+                  class="bagua-trigger"
+                  data-bagua-trigger="dui"
+                  for="bagua-dui"
+                  role="button"
+                  tabindex="0"
+                  aria-pressed="false"
+                  aria-controls="bagua-panel-dui"
+                  style="--angle: 0deg"
+                >
+                  <span class="bagua-trigger-content">
+                    <span class="bagua-char">兑</span>
+                    <span class="trigram" aria-hidden="true">
+                      <span class="trigram-line broken"></span>
+                      <span class="trigram-line"></span>
+                      <span class="trigram-line"></span>
+                    </span>
+                    <span class="bagua-name">
+                      <span class="lang-zh">泽</span>
+                      <span class="lang-en">Lake</span>
+                    </span>
+                  </span>
+                </label>
+
+                <label
+                  class="bagua-trigger"
+                  data-bagua-trigger="kun"
+                  for="bagua-kun"
+                  role="button"
+                  tabindex="0"
+                  aria-pressed="false"
+                  aria-controls="bagua-panel-kun"
+                  style="--angle: 135deg"
+                >
+                  <span class="bagua-trigger-content">
+                    <span class="bagua-char">坤</span>
+                    <span class="trigram" aria-hidden="true">
+                      <span class="trigram-line broken"></span>
+                      <span class="trigram-line broken"></span>
+                      <span class="trigram-line broken"></span>
+                    </span>
+                    <span class="bagua-name">
+                      <span class="lang-zh">地</span>
+                      <span class="lang-en">Earth</span>
+                    </span>
+                  </span>
+                </label>
+
+                <label
+                  class="bagua-trigger"
+                  data-bagua-trigger="kan"
+                  for="bagua-kan"
+                  role="button"
+                  tabindex="0"
+                  aria-pressed="false"
+                  aria-controls="bagua-panel-kan"
+                  style="--angle: 90deg"
+                >
+                  <span class="bagua-trigger-content">
+                    <span class="bagua-char">坎</span>
+                    <span class="trigram" aria-hidden="true">
+                      <span class="trigram-line broken"></span>
+                      <span class="trigram-line"></span>
+                      <span class="trigram-line broken"></span>
+                    </span>
+                    <span class="bagua-name">
+                      <span class="lang-zh">水</span>
+                      <span class="lang-en">Water</span>
+                    </span>
+                  </span>
+                </label>
+
+                <label
+                  class="bagua-trigger"
+                  data-bagua-trigger="gen"
+                  for="bagua-gen"
+                  role="button"
+                  tabindex="0"
+                  aria-pressed="false"
+                  aria-controls="bagua-panel-gen"
+                  style="--angle: 45deg"
+                >
+                  <span class="bagua-trigger-content">
+                    <span class="bagua-char">艮</span>
+                    <span class="trigram" aria-hidden="true">
+                      <span class="trigram-line"></span>
+                      <span class="trigram-line broken"></span>
+                      <span class="trigram-line broken"></span>
+                    </span>
+                    <span class="bagua-name">
+                      <span class="lang-zh">山</span>
+                      <span class="lang-en">Mountain</span>
+                    </span>
+                  </span>
+                </label>
+
+                <div class="bagua-center" aria-hidden="true">
+                  <svg viewBox="-100 -100 200 200" role="img">
+                    <circle cx="0" cy="0" r="96" fill="#fffaf2" />
+                    <path
+                      d="M 0 -96 A 48 48 0 0 1 0 0 A 48 48 0 0 0 0 96 A 96 96 0 0 1 0 -96"
+                      fill="#111a20"
+                    />
+                    <circle cx="0" cy="-48" r="12" fill="#fffaf2" />
+                    <circle cx="0" cy="48" r="12" fill="#111a20" />
+                    <circle
+                      cx="0"
+                      cy="0"
+                      r="95"
+                      fill="none"
+                      stroke="rgba(17,26,32,0.14)"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="bagua-note">
+                <span class="lang-zh">悬停或点击卦象，查看对应释义</span>
+                <span class="lang-en"
+                  >Hover or tap a trigram to update the interpretation</span
+                >
+              </div>
+            </div>
+
+            <div class="bagua-detail reveal">
+              <article class="bagua-panel" data-bagua-panel="qian" id="bagua-panel-qian">
+                <span class="bagua-overline">Qian</span>
+                <div class="bagua-panel-head">
+                  <div>
+                    <h3>
+                      <span class="lang-zh">乾卦：天与创始之机</span>
+                      <span class="lang-en"
+                        >Qian: Heaven and the principle of initiative</span
+                      >
+                    </h3>
+                    <p>
+                      <span class="lang-zh">三阳纯健，象天，主健、创始、首出</span>
+                      <span class="lang-en"
+                        >Three unbroken lines, signifying heaven, initiative,
+                        and creative potency</span
+                      >
+                    </p>
+                  </div>
+                  <div class="bagua-panel-symbol trigram" aria-hidden="true">
+                    <span class="trigram-line"></span>
+                    <span class="trigram-line"></span>
+                    <span class="trigram-line"></span>
+                  </div>
+                </div>
+                <div class="bagua-panel-body">
+                  <p class="lang-zh">
+                    乾在传统解释中常与天、君、父、元始之德相关，体现生成秩序中最主动、最能发动的一面。在《周易》研究中，它常被用来讨论宇宙秩序、主体性与阳刚德性的来源。
+                  </p>
+                  <p class="lang-en">
+                    In classical interpretation, Qian is associated with
+                    heaven, rulership, paternity, and originating virtue. It
+                    often serves as a key point of entry into discussions of
+                    cosmological order, agency, and yang vitality.
+                  </p>
+                </div>
+                <div class="bagua-facts">
+                  <div class="bagua-fact">
+                    <strong class="lang-zh">自然象</strong>
+                    <strong class="lang-en">Natural Image</strong>
+                    <span class="lang-zh">天</span>
+                    <span class="lang-en">Heaven</span>
+                  </div>
+                  <div class="bagua-fact">
+                    <strong class="lang-zh">关键词</strong>
+                    <strong class="lang-en">Keywords</strong>
+                    <span class="lang-zh">健、创始、主动</span>
+                    <span class="lang-en">Vitality, initiative, creativity</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="bagua-panel" data-bagua-panel="kun" id="bagua-panel-kun">
+                <span class="bagua-overline">Kun</span>
+                <div class="bagua-panel-head">
+                  <div>
+                    <h3>
+                      <span class="lang-zh">坤卦：地与承载之德</span>
+                      <span class="lang-en">Kun: Earth and the virtue of receptivity</span>
+                    </h3>
+                    <p>
+                      <span class="lang-zh">三阴纯顺，象地，主承载、包容、生育</span>
+                      <span class="lang-en"
+                        >Three broken lines, signifying earth, receptivity, and
+                        generative support</span
+                      >
+                    </p>
+                  </div>
+                  <div class="bagua-panel-symbol trigram" aria-hidden="true">
+                    <span class="trigram-line broken"></span>
+                    <span class="trigram-line broken"></span>
+                    <span class="trigram-line broken"></span>
+                  </div>
+                </div>
+                <div class="bagua-panel-body">
+                  <p class="lang-zh">
+                    坤与乾相对，强调顺承与厚载。它并非被动的空白，而是一种能承受、能成就、能滋养的结构力量，因而在《周易》中常被用来讨论德性政治、秩序承接与生成条件。
+                  </p>
+                  <p class="lang-en">
+                    Paired with Qian, Kun emphasizes support, capaciousness,
+                    and the condition of fruition. Rather than mere passivity,
+                    it names the structure through which order is received and
+                    sustained.
+                  </p>
+                </div>
+                <div class="bagua-facts">
+                  <div class="bagua-fact">
+                    <strong class="lang-zh">自然象</strong>
+                    <strong class="lang-en">Natural Image</strong>
+                    <span class="lang-zh">地</span>
+                    <span class="lang-en">Earth</span>
+                  </div>
+                  <div class="bagua-fact">
+                    <strong class="lang-zh">关键词</strong>
+                    <strong class="lang-en">Keywords</strong>
+                    <span class="lang-zh">顺、载、育</span>
+                    <span class="lang-en">Receptivity, support, nurture</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="bagua-panel" data-bagua-panel="zhen" id="bagua-panel-zhen">
+                <span class="bagua-overline">Zhen</span>
+                <div class="bagua-panel-head">
+                  <div>
+                    <h3>
+                      <span class="lang-zh">震卦：雷与发动之势</span>
+                      <span class="lang-en">Zhen: Thunder and the force of arousal</span>
+                    </h3>
+                    <p>
+                      <span class="lang-zh">一阳起于下，象雷，主振起、开端、惊发</span>
+                      <span class="lang-en"
+                        >Yang rising from below, signifying thunder, beginnings,
+                        and awakening</span
+                      >
+                    </p>
+                  </div>
+                  <div class="bagua-panel-symbol trigram" aria-hidden="true">
+                    <span class="trigram-line broken"></span>
+                    <span class="trigram-line broken"></span>
+                    <span class="trigram-line"></span>
+                  </div>
+                </div>
+                <div class="bagua-panel-body">
+                  <p class="lang-zh">
+                    震强调从静到动的突然转折，常用来说明秩序中的开端、惊醒与生发。它在解释《周易》的动态结构时尤其重要，因为许多变化都由“初动”开始。
+                  </p>
+                  <p class="lang-en">
+                    Zhen marks the sudden shift from stillness to movement. It
+                    is crucial for reading the dynamics of change, where many
+                    transformations begin with an initial stirring.
+                  </p>
+                </div>
+                <div class="bagua-facts">
+                  <div class="bagua-fact">
+                    <strong class="lang-zh">自然象</strong>
+                    <strong class="lang-en">Natural Image</strong>
+                    <span class="lang-zh">雷</span>
+                    <span class="lang-en">Thunder</span>
+                  </div>
+                  <div class="bagua-fact">
+                    <strong class="lang-zh">关键词</strong>
+                    <strong class="lang-en">Keywords</strong>
+                    <span class="lang-zh">发动、惊起、初始</span>
+                    <span class="lang-en">Arousal, shock, inception</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="bagua-panel" data-bagua-panel="xun" id="bagua-panel-xun">
+                <span class="bagua-overline">Xun</span>
+                <div class="bagua-panel-head">
+                  <div>
+                    <h3>
+                      <span class="lang-zh">巽卦：风与渗入之理</span>
+                      <span class="lang-en">Xun: Wind and the logic of penetration</span>
+                    </h3>
+                    <p>
+                      <span class="lang-zh">一阴入于下，象风亦象木，主入、顺、渐化</span>
+                      <span class="lang-en"
+                        >A yielding line entering below, signifying wind, wood,
+                        penetration, and gradual influence</span
+                      >
+                    </p>
+                  </div>
+                  <div class="bagua-panel-symbol trigram" aria-hidden="true">
+                    <span class="trigram-line"></span>
+                    <span class="trigram-line"></span>
+                    <span class="trigram-line broken"></span>
+                  </div>
+                </div>
+                <div class="bagua-panel-body">
+                  <p class="lang-zh">
+                    巽不是猛烈的冲击，而是缓慢进入、持久影响的结构。它适合说明教化、传播、制度渗透与思想扩散的过程，因此在学术传播与文明对话中尤具启发性。
+                  </p>
+                  <p class="lang-en">
+                    Xun denotes influence that enters gradually rather than by
+                    force. It is especially useful for thinking about
+                    transmission, pedagogy, dissemination, and slow cultural
+                    transformation.
+                  </p>
+                </div>
+                <div class="bagua-facts">
+                  <div class="bagua-fact">
+                    <strong class="lang-zh">自然象</strong>
+                    <strong class="lang-en">Natural Image</strong>
+                    <span class="lang-zh">风 / 木</span>
+                    <span class="lang-en">Wind / Wood</span>
+                  </div>
+                  <div class="bagua-fact">
+                    <strong class="lang-zh">关键词</strong>
+                    <strong class="lang-en">Keywords</strong>
+                    <span class="lang-zh">入、顺、渐化</span>
+                    <span class="lang-en">Penetration, yielding, gradual change</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="bagua-panel" data-bagua-panel="kan" id="bagua-panel-kan">
+                <span class="bagua-overline">Kan</span>
+                <div class="bagua-panel-head">
+                  <div>
+                    <h3>
+                      <span class="lang-zh">坎卦：水与历险之道</span>
+                      <span class="lang-en">Kan: Water and the path through danger</span>
+                    </h3>
+                    <p>
+                      <span class="lang-zh">阳陷阴中，象水，主险、流、陷而能通</span>
+                      <span class="lang-en"
+                        >A solid line enclosed by yielding lines, signifying
+                        water, risk, and passage through difficulty</span
+                      >
+                    </p>
+                  </div>
+                  <div class="bagua-panel-symbol trigram" aria-hidden="true">
+                    <span class="trigram-line broken"></span>
+                    <span class="trigram-line"></span>
+                    <span class="trigram-line broken"></span>
+                  </div>
+                </div>
+                <div class="bagua-panel-body">
+                  <p class="lang-zh">
+                    坎常与险阻、陷落和穿越相关，但其要义不止于“危险”，而在于如何在险中保持中实之德，并由此达成通行。这一结构对理解《周易》的处境论尤其关键。
+                  </p>
+                  <p class="lang-en">
+                    Kan is not simply danger itself; it concerns the way
+                    integrity is maintained within danger and how passage is
+                    found through difficulty. It is central to situational
+                    readings of the Zhouyi.
+                  </p>
+                </div>
+                <div class="bagua-facts">
+                  <div class="bagua-fact">
+                    <strong class="lang-zh">自然象</strong>
+                    <strong class="lang-en">Natural Image</strong>
+                    <span class="lang-zh">水</span>
+                    <span class="lang-en">Water</span>
+                  </div>
+                  <div class="bagua-fact">
+                    <strong class="lang-zh">关键词</strong>
+                    <strong class="lang-en">Keywords</strong>
+                    <span class="lang-zh">险、流行、中实</span>
+                    <span class="lang-en">Risk, flow, inward firmness</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="bagua-panel" data-bagua-panel="li" id="bagua-panel-li">
+                <span class="bagua-overline">Li</span>
+                <div class="bagua-panel-head">
+                  <div>
+                    <h3>
+                      <span class="lang-zh">离卦：火与文明之明</span>
+                      <span class="lang-en">Li: Fire and the clarity of civilization</span>
+                    </h3>
+                    <p>
+                      <span class="lang-zh">阴丽于阳中，象火，主明、附丽、显现</span>
+                      <span class="lang-en"
+                        >A yielding line between solid lines, signifying fire,
+                        clarity, attachment, and manifestation</span
+                      >
+                    </p>
+                  </div>
+                  <div class="bagua-panel-symbol trigram" aria-hidden="true">
+                    <span class="trigram-line"></span>
+                    <span class="trigram-line broken"></span>
+                    <span class="trigram-line"></span>
+                  </div>
+                </div>
+                <div class="bagua-panel-body">
+                  <p class="lang-zh">
+                    离所呈现的是文明之明与附丽之理。它既可以理解为照见，也可以理解为依附于某一结构而显明，因此与知识、礼乐、文教及文明表达的讨论紧密相关。
+                  </p>
+                  <p class="lang-en">
+                    Li speaks to illumination and patterned attachment. It is
+                    often linked to knowledge, ritual culture, and visible forms
+                    of civilization.
+                  </p>
+                </div>
+                <div class="bagua-facts">
+                  <div class="bagua-fact">
+                    <strong class="lang-zh">自然象</strong>
+                    <strong class="lang-en">Natural Image</strong>
+                    <span class="lang-zh">火</span>
+                    <span class="lang-en">Fire</span>
+                  </div>
+                  <div class="bagua-fact">
+                    <strong class="lang-zh">关键词</strong>
+                    <strong class="lang-en">Keywords</strong>
+                    <span class="lang-zh">明、文、显现</span>
+                    <span class="lang-en">Clarity, culture, manifestation</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="bagua-panel" data-bagua-panel="gen" id="bagua-panel-gen">
+                <span class="bagua-overline">Gen</span>
+                <div class="bagua-panel-head">
+                  <div>
+                    <h3>
+                      <span class="lang-zh">艮卦：山与止的边界</span>
+                      <span class="lang-en">Gen: Mountain and the boundary of stillness</span>
+                    </h3>
+                    <p>
+                      <span class="lang-zh">一阳止于上，象山，主止、定、界限与反思</span>
+                      <span class="lang-en"
+                        >A solid line resting above, signifying mountain,
+                        stillness, boundary, and reflective pause</span
+                      >
+                    </p>
+                  </div>
+                  <div class="bagua-panel-symbol trigram" aria-hidden="true">
+                    <span class="trigram-line"></span>
+                    <span class="trigram-line broken"></span>
+                    <span class="trigram-line broken"></span>
+                  </div>
+                </div>
+                <div class="bagua-panel-body">
+                  <p class="lang-zh">
+                    艮之“止”不是停滞，而是适时止步、形成界限、由动返静的能力。它有助于讨论规范、自我节制、观察与反思等主题，在经典解释学中也很重要。
+                  </p>
+                  <p class="lang-en">
+                    Gen is not stagnation but the capacity to stop at the right
+                    point, establish limits, and return from motion to
+                    contemplative pause. It is especially useful for thinking
+                    about discipline and reflection.
+                  </p>
+                </div>
+                <div class="bagua-facts">
+                  <div class="bagua-fact">
+                    <strong class="lang-zh">自然象</strong>
+                    <strong class="lang-en">Natural Image</strong>
+                    <span class="lang-zh">山</span>
+                    <span class="lang-en">Mountain</span>
+                  </div>
+                  <div class="bagua-fact">
+                    <strong class="lang-zh">关键词</strong>
+                    <strong class="lang-en">Keywords</strong>
+                    <span class="lang-zh">止、界限、定静</span>
+                    <span class="lang-en">Stillness, boundary, composure</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="bagua-panel" data-bagua-panel="dui" id="bagua-panel-dui">
+                <span class="bagua-overline">Dui</span>
+                <div class="bagua-panel-head">
+                  <div>
+                    <h3>
+                      <span class="lang-zh">兑卦：泽与交流之悦</span>
+                      <span class="lang-en">Dui: Lake and the joy of exchange</span>
+                    </h3>
+                    <p>
+                      <span class="lang-zh">一阴见于上，象泽，主悦、说、感通与交流</span>
+                      <span class="lang-en"
+                        >A yielding line above, signifying lake, joy, speech,
+                        and communicative resonance</span
+                      >
+                    </p>
+                  </div>
+                  <div class="bagua-panel-symbol trigram" aria-hidden="true">
+                    <span class="trigram-line broken"></span>
+                    <span class="trigram-line"></span>
+                    <span class="trigram-line"></span>
+                  </div>
+                </div>
+                <div class="bagua-panel-body">
+                  <p class="lang-zh">
+                    兑常与悦、说和感通相关，既指情感上的和悦，也指公共表达与言说的能力。在文明交流与跨语际传播的语境下，它尤其适合放在“对话”与“互鉴”的主题中理解。
+                  </p>
+                  <p class="lang-en">
+                    Dui concerns joy, speech, and shared resonance. It is
+                    particularly useful for framing dialogue, public expression,
+                    and cross-cultural communication.
+                  </p>
+                </div>
+                <div class="bagua-facts">
+                  <div class="bagua-fact">
+                    <strong class="lang-zh">自然象</strong>
+                    <strong class="lang-en">Natural Image</strong>
+                    <span class="lang-zh">泽</span>
+                    <span class="lang-en">Lake</span>
+                  </div>
+                  <div class="bagua-fact">
+                    <strong class="lang-zh">关键词</strong>
+                    <strong class="lang-en">Keywords</strong>
+                    <span class="lang-zh">悦、说、交流</span>
+                    <span class="lang-en">Joy, speech, exchange</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="contact">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="section-tag">
+                <span class="lang-zh">联系</span>
+                <span class="lang-en">Contact</span>
+              </div>
+              <h2 class="section-title">
+                <span class="lang-zh">欢迎发起学术合作、讲座邀请与咨询联络</span>
+                <span class="lang-en"
+                  >Open for scholarly collaboration, lecture invitations, and
+                  consulting conversations</span
+                >
+              </h2>
+            </div>
+            <p class="section-copy">
+              <span class="lang-zh"
+                >当前版本先完成前端展示，联系表单可在后续接入邮箱服务、表单平台或自建后台。</span
+              >
+              <span class="lang-en"
+                >This first release focuses on the front-end. The inquiry form
+                can later be connected to an email service, form platform, or
+                a custom backend.</span
+              >
+            </p>
+          </div>
+
+          <div class="contact-layout">
+            <div class="contact-stack reveal">
+              <article class="contact-card">
+                <h3>
+                  <span class="lang-zh">网站信息</span>
+                  <span class="lang-en">Site Information</span>
+                </h3>
+                <div class="contact-list">
+                  <div>
+                    <strong class="lang-zh">平台性质</strong>
+                    <strong class="lang-en">Platform Type</strong>
+                    <span class="lang-zh">个人学术与咨询网站</span>
+                    <span class="lang-en">Personal scholarly and advisory website</span>
+                  </div>
+                  <div>
+                    <strong class="lang-zh">办公地点</strong>
+                    <strong class="lang-en">Address</strong>
+                    <span class="lang-zh">中国上海</span>
+                    <span class="lang-en">Shanghai, China</span>
+                  </div>
+                  <div>
+                    <strong class="lang-zh">联系邮箱</strong>
+                    <strong class="lang-en">Email</strong>
+                    <a href="mailto:htxia0413@gmail.com">htxia0413@gmail.com</a>
+                  </div>
+                  <div>
+                    <strong class="lang-zh">合作类型</strong>
+                    <strong class="lang-en">Collaboration Scope</strong>
+                    <span class="lang-zh">研究、活动、出版与咨询</span>
+                    <span class="lang-en"
+                      >Research, events, publications, and advisory</span
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="contact-card">
+                <h3>
+                  <span class="lang-zh">适合的咨询方向</span>
+                  <span class="lang-en">Typical Inquiry Areas</span>
+                </h3>
+                <ul class="point-list">
+                  <li>
+                    <span class="lang-zh">专题讲座与课程合作</span>
+                    <span class="lang-en"
+                      >Lecture and curriculum partnerships</span
+                    >
+                  </li>
+                  <li>
+                    <span class="lang-zh">出版项目的学术策划、译介与审读</span>
+                    <span class="lang-en"
+                      >Academic planning, translation, and review for
+                      publication projects</span
+                    >
+                  </li>
+                  <li>
+                    <span class="lang-zh">跨文化传播和国际交流项目咨询</span>
+                    <span class="lang-en"
+                      >Consulting for intercultural communication and
+                      international exchange</span
+                    >
+                  </li>
+                </ul>
+                <div class="hero-actions">
+                  <a class="button button-primary js-consult-link" href="../consult/zh/index.html">
+                    <span class="lang-zh">进入咨询站</span>
+                    <span class="lang-en">Open Consulting Site</span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <article class="form-card reveal">
+              <h3>
+                <span class="lang-zh">发送咨询</span>
+                <span class="lang-en">Send an Inquiry</span>
+              </h3>
+              <p>
+                <span class="lang-zh"
+                  >这个表单已接入后端接口，提交后会优先投递到
+                  <a href="mailto:htxia0413@gmail.com">htxia0413@gmail.com</a>。</span
+                >
+                <span class="lang-en"
+                  >This form is connected to the backend and routes inquiries to
+                  <a href="mailto:htxia0413@gmail.com">htxia0413@gmail.com</a>.</span
+                >
+              </p>
+
+              <form
+                id="contact-form"
+                class="js-inquiry-form"
+                data-page="main-site-contact"
+              >
+                <div class="form-grid">
+                  <label class="field">
+                    <span class="lang-zh">姓名</span>
+                    <span class="lang-en">Name</span>
+                    <input id="name" name="name" type="text" />
+                  </label>
+                  <label class="field">
+                    <span class="lang-zh">机构 / 公司</span>
+                    <span class="lang-en">Institution / Organization</span>
+                    <input id="organization" name="organization" type="text" />
+                  </label>
+                  <label class="field">
+                    <span class="lang-zh">邮箱</span>
+                    <span class="lang-en">Email</span>
+                    <input id="email" name="email" type="email" />
+                  </label>
+                  <label class="field">
+                    <span class="lang-zh">咨询类型</span>
+                    <span class="lang-en">Inquiry Type</span>
+                    <select id="topic" name="topic">
+                      <option value="research">Academic Collaboration</option>
+                      <option value="event">Events and Lectures</option>
+                      <option value="publication">Publications</option>
+                      <option value="fellowship">Fellowship</option>
+                      <option value="consulting">Consulting</option>
+                    </select>
+                  </label>
+                  <label class="field full">
+                    <span class="lang-zh">留言内容</span>
+                    <span class="lang-en">Message</span>
+                    <textarea id="message" name="message"></textarea>
+                  </label>
+                </div>
+
+                <div class="form-foot">
+                  <button class="button button-primary" type="submit">
+                    <span class="lang-zh">提交咨询</span>
+                    <span class="lang-en">Submit Inquiry</span>
+                  </button>
+                  <span class="form-note" id="form-note">
+                    <span class="lang-zh"
+                      >默认接收邮箱：<a href="mailto:htxia0413@gmail.com"
+                        >htxia0413@gmail.com</a
+                      ></span
+                    >
+                    <span class="lang-en"
+                      >Default recipient:
+                      <a href="mailto:htxia0413@gmail.com"
+                        >htxia0413@gmail.com</a
+                      ></span
+                    >
+                  </span>
+                </div>
+                <p class="form-status" id="form-status" aria-live="polite"></p>
+              </form>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-copy">
+          <div class="footer-title lang-zh">易学与世界文明</div>
+          <div class="footer-title lang-en">I Ching and World Civilizations</div>
+          <p class="lang-zh">个人独立运营的学术与咨询平台</p>
+          <p class="lang-en">An independently operated scholarly and advisory platform</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <a href="#about">
+            <span class="lang-zh">关于</span>
+            <span class="lang-en">About</span>
+          </a>
+          <a href="research-areas.html">
+            <span class="lang-zh">研究领域</span>
+            <span class="lang-en">Research Areas</span>
+          </a>
+          <a href="lectures.html">
+            <span class="lang-zh">讲座</span>
+            <span class="lang-en">Lectures</span>
+          </a>
+          <a href="journal.html">
+            <span class="lang-zh">期刊</span>
+            <span class="lang-en">Journal</span>
+          </a>
+          <a href="guanju-society.html">
+            <span class="lang-zh">关雎学社</span>
+            <span class="lang-en">Guanju Society</span>
+          </a>
+          <a href="#contact">
+            <span class="lang-zh">联系</span>
+            <span class="lang-en">Contact</span>
+          </a>
+          <a class="js-consult-link" href="../consult/zh/index.html">
+            <span class="lang-zh">咨询</span>
+            <span class="lang-en">CONSULT</span>
+          </a>
+        </nav>
+      </div>
+    </footer>
+    <script src="site.js?v=20260408-1"></script>
+  </body>
+</html>

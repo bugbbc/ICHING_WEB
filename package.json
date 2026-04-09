@@ -1,0 +1,9 @@
+{
+  "name": "iching-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bilingual front-end and lightweight backend for the Center for I Ching and World Civilizations.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
