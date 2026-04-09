@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; url=./en/index.html" />
+    <script>
+      (function () {
+        var target = new URL("./en/index.html", window.location.href);
+        if (window.location.search) {
+          target.search = window.location.search;
+        }
+        if (window.location.hash) {
+          target.hash = window.location.hash;
+        }
+        window.location.replace(target.href);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

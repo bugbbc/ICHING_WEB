@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; url=./main/index.html" />
+    <script>
+      (function () {
+        var target = new URL("./main/index.html", window.location.href);
+        if (window.location.search) {
+          target.search = window.location.search;
+        }
+        if (window.location.hash) {
+          target.hash = window.location.hash;
+        }
+        window.location.replace(target.href);
+      })();
+    </script>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+        background: #f4ede0;
+        color: #1b252c;
+        font: 16px/1.6 "Source Sans 3", "Noto Sans SC", sans-serif;
+      }
+
+      .redirect-card {
+        max-width: 36rem;
+        padding: 1.5rem 1.75rem;
+        border: 1px solid rgba(27, 37, 44, 0.12);
+        border-radius: 1rem;
+        background: rgba(255, 250, 242, 0.92);
+        box-shadow: 0 18px 48px rgba(27, 37, 44, 0.08);
+      }
+
+      a {
+        color: #9f6a34;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="redirect-card">
+      <p>正在跳转到主页。</p>
+      <p>如果没有自动跳转，请访问 <a href="./main/index.html">./main/index.html</a>。</p>
+    </div>
+  </body>
+</html>
