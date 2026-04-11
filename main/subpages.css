@@ -92,10 +92,29 @@ img {
 }
 
 .brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.9rem;
   min-width: 0;
+  padding: 0.55rem 0.95rem 0.55rem 0.55rem;
+  border: 2px solid rgba(17, 26, 32, 0.92);
+  border-radius: 1.35rem;
+  background: rgba(255, 250, 242, 0.94);
+  box-shadow:
+    0 16px 32px rgba(17, 26, 32, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.brand:hover,
+.brand:focus-visible {
+  transform: translateY(-1px);
+  box-shadow:
+    0 20px 36px rgba(17, 26, 32, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 0.62);
 }
 
 .brand-mark {
@@ -145,17 +164,18 @@ img {
 .brand-title {
   display: block;
   font-family: var(--font-serif);
-  font-size: clamp(1.2rem, 1.8vw, 1.55rem);
-  line-height: 1.1;
+  line-height: 1.05;
   color: var(--ink);
 }
 
-.brand-subtitle {
-  display: block;
-  margin-top: 0.2rem;
-  font-size: 0.8rem;
-  color: var(--muted);
-  letter-spacing: 0.06em;
+.brand-title.lang-zh {
+  font-size: clamp(1.35rem, 2vw, 1.72rem);
+  letter-spacing: 0.08em;
+}
+
+.brand-title.lang-en {
+  font-size: clamp(1.02rem, 1.38vw, 1.24rem);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -757,9 +777,10 @@ img {
     font-size: 0.78rem;
   }
 
-  .brand-subtitle {
-    letter-spacing: 0.04em;
-    text-transform: none;
+  .brand {
+    gap: 0.72rem;
+    padding: 0.45rem 0.72rem 0.45rem 0.45rem;
+    border-radius: 1.1rem;
   }
 
   .page-title {

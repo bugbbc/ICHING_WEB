@@ -2,169 +2,70 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=https://ichingandcivilization.org/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>期刊 | 易学与世界文明</title>
-    <meta
-      name="description"
-      content="易学与世界文明网站期刊页面，展示期刊定位、稿件方向与后续独立投稿网站规划。"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="subpages.css" />
+    <title>期刊已迁移 | 易經文明</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f0e5;
+        --ink: #111a20;
+        --accent: #9f6a34;
+        --line: rgba(17, 26, 32, 0.14);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+        background:
+          radial-gradient(circle at top, rgba(159, 106, 52, 0.12), transparent 34%),
+          var(--bg);
+        color: var(--ink);
+        font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+      }
+
+      .card {
+        width: min(100%, 42rem);
+        padding: 2rem;
+        border: 1px solid var(--line);
+        border-radius: 1.5rem;
+        background: rgba(255, 251, 245, 0.96);
+        box-shadow: 0 24px 60px rgba(17, 26, 32, 0.1);
+      }
+
+      h1 {
+        margin: 0 0 0.9rem;
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        line-height: 1;
+      }
+
+      p {
+        margin: 0.8rem 0 0;
+        font-size: 1.02rem;
+        line-height: 1.75;
+      }
+
+      a {
+        color: var(--accent);
+      }
+    </style>
   </head>
-  <body
-    data-lang="zh"
-    data-title-zh="期刊 | 易学与世界文明"
-    data-title-en="Journal | I Ching and World Civilizations"
-  >
-    <header class="site-header">
-      <div class="topline">
-        <div class="container">
-          <span class="lang-zh">出版栏目 · 期刊规划、专栏方向与投稿平台预告</span>
-          <span class="lang-en">Publications section · Journal vision, special sections, and forthcoming submission platform</span>
-        </div>
-      </div>
-      <div class="container nav-wrap">
-        <a class="brand" href="index.html" aria-label="Site Home">
-          <span class="brand-mark" aria-hidden="true"><span></span><span class="broken"></span><span></span></span>
-          <span class="brand-copy">
-            <span class="brand-title lang-zh">易学与世界文明</span>
-            <span class="brand-title lang-en">I Ching and World Civilizations</span>
-            <span class="brand-subtitle lang-zh">独立研究与咨询平台</span>
-            <span class="brand-subtitle lang-en">Independent Research and Advisory Platform</span>
-          </span>
-        </a>
-        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-panel">
-          <span class="lang-zh">菜单</span><span class="lang-en">Menu</span>
-        </button>
-        <div class="nav-panel" id="nav-panel">
-          <nav class="nav-links" aria-label="Main Navigation">
-            <a href="index.html#about"><span class="lang-zh">关于</span><span class="lang-en">About</span></a>
-            <div class="nav-group">
-              <button class="nav-parent" type="button" data-nav-toggle aria-expanded="false"><span class="lang-zh">研究</span><span class="lang-en">Research</span><span class="nav-caret" aria-hidden="true"></span></button>
-              <div class="nav-submenu">
-                <a href="research-areas.html"><span class="lang-zh">研究领域</span><span class="lang-en">Research Areas</span></a>
-                <a href="research-team.html"><span class="lang-zh">研究团队</span><span class="lang-en">Research Team</span></a>
-              </div>
-            </div>
-            <div class="nav-group">
-              <button class="nav-parent" type="button" data-nav-toggle aria-expanded="false"><span class="lang-zh">活动</span><span class="lang-en">Events</span><span class="nav-caret" aria-hidden="true"></span></button>
-              <div class="nav-submenu">
-                <a href="lectures.html"><span class="lang-zh">讲座</span><span class="lang-en">Lectures</span></a>
-                <a href="conferences.html"><span class="lang-zh">会议</span><span class="lang-en">Conferences</span></a>
-              </div>
-            </div>
-            <div class="nav-group">
-              <button class="nav-parent is-current" type="button" data-nav-toggle aria-expanded="false"><span class="lang-zh">出版</span><span class="lang-en">Publications</span><span class="nav-caret" aria-hidden="true"></span></button>
-              <div class="nav-submenu">
-                <a class="is-current" href="journal.html"><span class="lang-zh">期刊</span><span class="lang-en">Journal</span></a>
-                <a href="books.html"><span class="lang-zh">图书</span><span class="lang-en">Books</span></a>
-              </div>
-            </div>
-            <div class="nav-group">
-              <button class="nav-parent" type="button" data-nav-toggle aria-expanded="false"><span class="lang-zh">社群</span><span class="lang-en">Community</span><span class="nav-caret" aria-hidden="true"></span></button>
-              <div class="nav-submenu">
-                <a href="guanju-society.html"><span class="lang-zh">关雎学社</span><span class="lang-en">Guanju Society</span></a>
-                <a href="student-associations.html"><span class="lang-zh">学生社团</span><span class="lang-en">Student Associations</span></a>
-              </div>
-            </div>
-            <a href="index.html#contact"><span class="lang-zh">联系</span><span class="lang-en">Contact</span></a>
-          </nav>
-          <a class="button nav-cta js-consult-link" href="../consult/zh/index.html"><span class="lang-zh">咨询</span><span class="lang-en">CONSULT</span></a>
-          <button class="lang-switch" id="lang-switch" type="button">EN</button>
-        </div>
-      </div>
-    </header>
-
-    <main class="page-main">
-      <section class="page-hero">
-        <div class="container">
-          <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span class="lang-zh">期刊</span><span class="lang-en">Journal</span></div>
-          <div class="page-kicker"><span class="lang-zh">Publications</span><span class="lang-en">Publications</span></div>
-          <h1 class="page-title"><span class="lang-zh">期刊</span><span class="lang-en">Journal</span></h1>
-          <p class="page-lead">
-            <span class="lang-zh">这一页面目前作为期刊信息入口，用于介绍期刊定位、栏目方向和稿件类型。你后续开发的独立投稿网站可以直接接管这一栏目，承担注册、投稿、审稿与作者中心等完整功能。</span>
-            <span class="lang-en">This page currently acts as an informational gateway for the journal. A dedicated submission platform can later replace or extend it with full registration, submission, review, and author-center features.</span>
-          </p>
-          <div class="hero-meta">
-            <article class="hero-meta-card"><strong class="lang-zh">独立站预留</strong><strong class="lang-en">Reserved for Separate Site</strong><span class="lang-zh">后续可跳转到单独开发的投稿系统</span><span class="lang-en">Can later point to a dedicated submission website</span></article>
-            <article class="hero-meta-card"><strong class="lang-zh">栏目规划</strong><strong class="lang-en">Editorial Sections</strong><span class="lang-zh">论文、译文、书评、材料整理与专题专栏</span><span class="lang-en">Articles, translations, reviews, source materials, and special sections</span></article>
-            <article class="hero-meta-card"><strong class="lang-zh">国际接口</strong><strong class="lang-en">Global Interface</strong><span class="lang-zh">适合发展双语摘要和海外学者投稿入口</span><span class="lang-en">Designed for bilingual abstracts and future international submissions</span></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="page-section soft">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <div class="section-tag">Editorial</div>
-              <h2 class="section-title"><span class="lang-zh">期刊方向建议</span><span class="lang-en">Suggested Editorial Scope</span></h2>
-            </div>
-            <p class="section-copy"><span class="lang-zh">当前内容以学术定位展示为主，后续可直接替换为“投稿须知”“编委会”“在线投稿”等真实模块。</span><span class="lang-en">The current content focuses on academic positioning and can later be replaced by instructions for authors, editorial board pages, and online submission modules.</span></p>
-          </div>
-          <div class="card-grid">
-            <article class="content-card">
-              <span class="mini-label">Scope I</span>
-              <h3><span class="lang-zh">《周易》与出土文献研究</span><span class="lang-en">Zhouyi and Excavated Manuscripts</span></h3>
-              <p class="lang-zh">接收围绕版本校勘、异文、简帛材料、图像资料与基础文献整理的学术论文。</p>
-              <p class="lang-en">Articles may address collation, variants, bamboo and silk manuscripts, visual materials, and documentary foundations.</p>
-            </article>
-            <article class="content-card">
-              <span class="mini-label">Scope II</span>
-              <h3><span class="lang-zh">经典互证与思想史研究</span><span class="lang-en">Classical Comparison and Intellectual History</span></h3>
-              <p class="lang-zh">鼓励《周易》与经学、政治哲学、礼乐传统、医学经典之间的综合研究。</p>
-              <p class="lang-en">The journal may encourage work linking the Zhouyi with classical studies, political thought, ritual traditions, and medical texts.</p>
-            </article>
-            <article class="content-card">
-              <span class="mini-label">Scope III</span>
-              <h3><span class="lang-zh">国际译介与文明比较</span><span class="lang-en">Translation and Civilizational Comparison</span></h3>
-              <p class="lang-zh">适合刊发海外研究评述、译介论文、文明比较专题及跨学科对话成果。</p>
-              <p class="lang-en">Ideal for review essays on global scholarship, translation studies, civilizational comparison, and interdisciplinary dialogue.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="page-section">
-        <div class="container split-layout">
-          <article class="content-card">
-            <span class="mini-label"><span class="lang-zh">Platform</span><span class="lang-en">Platform</span></span>
-            <h3><span class="lang-zh">后续独立投稿站建议模块</span><span class="lang-en">Modules for the Future Submission Site</span></h3>
-            <ul class="detail-list">
-              <li><span class="lang-zh">作者注册、投稿状态查询与修回记录。</span><span class="lang-en">Author registration, submission tracking, and revision records.</span></li>
-              <li><span class="lang-zh">编委会、栏目说明、伦理规范与版权说明页面。</span><span class="lang-en">Editorial board, section descriptions, publication ethics, and copyright pages.</span></li>
-              <li><span class="lang-zh">中英双语界面与摘要字段，为国际投稿预留结构。</span><span class="lang-en">A bilingual interface and abstract fields to support future international submission flows.</span></li>
-            </ul>
-          </article>
-          <aside class="callout-card dark">
-            <h3><span class="lang-zh">当前阶段的作用</span><span class="lang-en">Role of This Interim Page</span></h3>
-            <p class="lang-zh">在独立期刊站上线前，这一页面先承担宣传说明、栏目介绍和学术定位展示的作用。</p>
-            <p class="lang-en">Before the dedicated journal site launches, this page can function as the public-facing description of scope, mission, and editorial orientation.</p>
-          </aside>
-        </div>
-      </section>
+  <body>
+    <main class="card">
+      <h1>期刊已迁移</h1>
+      <p>《易經與文明》期刊网站现已独立，正在跳转到新站：</p>
+      <p><a href="https://ichingandcivilization.org/">https://ichingandcivilization.org/</a></p>
+      <p>The journal has moved to its standalone site. If redirect does not start automatically, use the link above.</p>
+      <script>
+        window.location.replace("https://ichingandcivilization.org/");
+      </script>
     </main>
-
-    <footer class="footer">
-      <div class="container footer-grid">
-        <div class="footer-copy">
-          <div class="footer-title lang-zh">期刊</div>
-          <div class="footer-title lang-en">Journal</div>
-          <p class="lang-zh">后续上线独立投稿站时，这个页面可以保留为门户，也可以直接跳转到新站。</p>
-          <p class="lang-en">When the standalone journal platform is ready, this page can remain as a gateway or redirect directly to the new site.</p>
-        </div>
-        <nav class="footer-nav" aria-label="Footer Navigation">
-          <a href="books.html"><span class="lang-zh">图书</span><span class="lang-en">Books</span></a>
-          <a href="index.html#contact"><span class="lang-zh">联系</span><span class="lang-en">Contact</span></a>
-          <a class="js-consult-link" href="../consult/zh/index.html"><span class="lang-zh">咨询</span><span class="lang-en">CONSULT</span></a>
-        </nav>
-      </div>
-    </footer>
-    <script src="site.js?v=20260408-1"></script>
   </body>
 </html>

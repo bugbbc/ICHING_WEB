@@ -32,7 +32,7 @@ const LEGACY_REDIRECTS = {
   "/books.html": "/main/books.html",
   "/conferences.html": "/main/conferences.html",
   "/guanju-society.html": "/main/guanju-society.html",
-  "/journal.html": "/main/journal.html",
+  "/journal.html": "https://ichingandcivilization.org/",
   "/lectures.html": "/main/lectures.html",
   "/research-areas.html": "/main/research-areas.html",
   "/research-team.html": "/main/research-team.html",

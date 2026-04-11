@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>易学与世界文明 | I Ching and World Civilizations</title>
+    <title>易經文明 | I CHING CIVILIZATION</title>
     <meta
       name="description"
-      content="易学与世界文明是一个个人独立运营的学术与咨询网站，围绕《周易》开展文本研究、经典互证、文明比较、出版传播与咨询合作。"
+      content="易經文明是一个个人独立运营的学术与咨询网站，围绕《周易》开展文本研究、经典互证、文明比较、出版传播与咨询合作。"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -111,10 +111,29 @@
       }
 
       .brand {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         gap: 0.9rem;
         min-width: 0;
+        padding: 0.55rem 0.95rem 0.55rem 0.55rem;
+        border: 2px solid rgba(17, 26, 32, 0.92);
+        border-radius: 1.35rem;
+        background: rgba(255, 250, 242, 0.94);
+        box-shadow:
+          0 16px 32px rgba(17, 26, 32, 0.1),
+          inset 0 1px 0 rgba(255, 255, 255, 0.55);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          border-color 0.2s ease;
+      }
+
+      .brand:hover,
+      .brand:focus-visible {
+        transform: translateY(-1px);
+        box-shadow:
+          0 20px 36px rgba(17, 26, 32, 0.13),
+          inset 0 1px 0 rgba(255, 255, 255, 0.62);
       }
 
       .brand-mark {
@@ -164,17 +183,18 @@
       .brand-title {
         display: block;
         font-family: var(--font-serif);
-        font-size: clamp(1.2rem, 1.8vw, 1.55rem);
-        line-height: 1.1;
+        line-height: 1.05;
         color: var(--ink);
       }
 
-      .brand-subtitle {
-        display: block;
-        margin-top: 0.2rem;
-        font-size: 0.8rem;
-        color: var(--muted);
-        letter-spacing: 0.06em;
+      .brand-title.lang-zh {
+        font-size: clamp(1.35rem, 2vw, 1.72rem);
+        letter-spacing: 0.08em;
+      }
+
+      .brand-title.lang-en {
+        font-size: clamp(1.02rem, 1.38vw, 1.24rem);
+        letter-spacing: 0.12em;
         text-transform: uppercase;
       }
 
@@ -1744,9 +1764,10 @@
           font-size: 0.78rem;
         }
 
-        .brand-subtitle {
-          letter-spacing: 0.04em;
-          text-transform: none;
+        .brand {
+          gap: 0.72rem;
+          padding: 0.45rem 0.72rem 0.45rem 0.45rem;
+          border-radius: 1.1rem;
         }
 
         .section,
@@ -1822,8 +1843,8 @@
   </head>
   <body
     data-lang="zh"
-    data-title-zh="易学与世界文明 | I Ching and World Civilizations"
-    data-title-en="I Ching and World Civilizations"
+    data-title-zh="易經文明 | I CHING CIVILIZATION"
+    data-title-en="I CHING CIVILIZATION"
   >
     <header class="site-header">
       <div class="topline">
@@ -1844,14 +1865,8 @@
             <span></span>
           </span>
           <span class="brand-copy">
-            <span class="brand-title lang-zh">易学与世界文明</span>
-            <span class="brand-title lang-en"
-              >I Ching and World Civilizations</span
-            >
-            <span class="brand-subtitle lang-zh">独立研究与咨询平台</span>
-            <span class="brand-subtitle lang-en"
-              >Independent Research and Advisory Platform</span
-            >
+            <span class="brand-title lang-zh">易經文明</span>
+            <span class="brand-title lang-en">I CHING CIVILIZATION</span>
           </span>
         </a>
 
@@ -1931,7 +1946,7 @@
                 <span class="nav-caret" aria-hidden="true"></span>
               </button>
               <div class="nav-submenu">
-                <a href="journal.html">
+                <a href="https://ichingandcivilization.org/">
                   <span class="lang-zh">期刊</span>
                   <span class="lang-en">Journal</span>
                 </a>
@@ -1994,8 +2009,8 @@
               >
             </p>
             <h1>
-              <span class="lang-zh">易学与世界文明</span>
-              <span class="lang-en">I Ching and World Civilizations</span>
+              <span class="lang-zh">易經文明</span>
+              <span class="lang-en">I CHING CIVILIZATION</span>
             </h1>
             <p class="hero-deck">
               <span class="lang-zh"
@@ -3739,8 +3754,8 @@
     <footer class="footer">
       <div class="container footer-grid">
         <div class="footer-copy">
-          <div class="footer-title lang-zh">易学与世界文明</div>
-          <div class="footer-title lang-en">I Ching and World Civilizations</div>
+          <div class="footer-title lang-zh">易經文明</div>
+          <div class="footer-title lang-en">I CHING CIVILIZATION</div>
           <p class="lang-zh">个人独立运营的学术与咨询平台</p>
           <p class="lang-en">An independently operated scholarly and advisory platform</p>
         </div>
@@ -3758,7 +3773,7 @@
             <span class="lang-zh">讲座</span>
             <span class="lang-en">Lectures</span>
           </a>
-          <a href="journal.html">
+          <a href="https://ichingandcivilization.org/">
             <span class="lang-zh">期刊</span>
             <span class="lang-en">Journal</span>
           </a>
