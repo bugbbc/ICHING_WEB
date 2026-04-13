@@ -9,7 +9,7 @@ const DATA_DIR = path.join(ROOT, "data");
 const INQUIRY_LOG = path.join(DATA_DIR, "inquiries.ndjson");
 const HOST = process.env.HOST || "127.0.0.1";
 const PORT = Number(process.env.PORT || 3000);
-const RECIPIENT_EMAIL = process.env.INQUIRY_EMAIL || "htxia0413@gmail.com";
+const RECIPIENT_EMAIL = process.env.INQUIRY_EMAIL || "ichingciv@gmail.com";
 const SENDMAIL_PATH = process.env.SENDMAIL_PATH || "sendmail";
 const MAX_BODY_SIZE = 1024 * 1024;
 
