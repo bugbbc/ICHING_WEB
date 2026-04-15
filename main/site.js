@@ -411,17 +411,5 @@
     revealItems.forEach((item) => observer.observe(item));
   }
 
-  let initialLang = null;
-
-  try {
-    initialLang = localStorage.getItem("center-language");
-  } catch (error) {
-    initialLang = null;
-  }
-
-  if (!initialLang) {
-    initialLang = /^zh/i.test(navigator.language) ? "zh" : "en";
-  }
-
-  setLanguage(initialLang);
+  setLanguage("en");
 })();
