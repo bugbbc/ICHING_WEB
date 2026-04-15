@@ -9,6 +9,10 @@
   const revealItems = Array.from(document.querySelectorAll(".reveal"));
   const inquiryForms = Array.from(document.querySelectorAll(".js-inquiry-form"));
   const baguaModules = Array.from(document.querySelectorAll(".js-bagua"));
+  const CONSULT_URLS = {
+    zh: "https://ichingciv.com/zh/index.html",
+    en: "https://ichingciv.com/en/index.html",
+  };
   const titleText = {
     zh: body.dataset.titleZh || document.title,
     en: body.dataset.titleEn || document.title,
@@ -168,10 +172,7 @@
     updateTopicText(lang);
 
     consultLinks.forEach((link) => {
-      link.href =
-        lang === "zh"
-          ? "../consult/zh/index.html"
-          : "../consult/en/index.html";
+      link.href = lang === "zh" ? CONSULT_URLS.zh : CONSULT_URLS.en;
     });
 
     if (langSwitch) {

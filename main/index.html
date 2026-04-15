@@ -229,6 +229,17 @@
 
       .nav-group {
         position: relative;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .nav-group::after {
+        content: "";
+        position: absolute;
+        left: -1rem;
+        right: -1rem;
+        top: 100%;
+        height: 1rem;
       }
 
       .nav-links > a::after,
@@ -271,16 +282,18 @@
 
       .nav-submenu {
         position: absolute;
-        top: calc(100% + 0.95rem);
+        top: calc(100% + 0.32rem);
         left: -1rem;
-        min-width: 15rem;
-        padding: 0.6rem;
+        min-width: 17.5rem;
+        padding: 0.75rem;
         display: grid;
-        gap: 0.25rem;
-        border-radius: 1.15rem;
+        gap: 0.15rem;
+        border-radius: 1rem;
         border: 1px solid var(--line);
         background: rgba(255, 250, 242, 0.98);
-        box-shadow: var(--shadow);
+        box-shadow:
+          0 20px 48px rgba(17, 26, 32, 0.12),
+          0 0 0 1px rgba(17, 26, 32, 0.02);
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
@@ -291,16 +304,29 @@
           visibility 0.2s ease;
       }
 
+      .nav-submenu::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -0.75rem;
+        height: 0.75rem;
+      }
+
       .nav-submenu a {
-        padding: 0.72rem 0.82rem;
-        border-radius: 0.9rem;
-        font-size: 0.93rem;
-        line-height: 1.35;
+        padding: 0.88rem 0.95rem;
+        border-radius: 0.8rem;
+        font-size: 0.94rem;
+        line-height: 1.3;
+      }
+
+      .nav-submenu a + a {
+        border-top: 1px solid rgba(17, 26, 32, 0.06);
       }
 
       .nav-submenu a:hover,
       .nav-submenu a:focus-visible {
-        background: rgba(17, 26, 32, 0.05);
+        background: rgba(17, 26, 32, 0.045);
       }
 
       .nav-group:hover .nav-submenu,
@@ -1659,6 +1685,11 @@
           width: 100%;
         }
 
+        .nav-group::after,
+        .nav-submenu::before {
+          display: none;
+        }
+
         .nav-links > a,
         .nav-parent {
           width: 100%;
@@ -1986,7 +2017,7 @@
             </a>
           </nav>
 
-          <a class="button nav-cta js-consult-link" href="../consult/zh/index.html">
+          <a class="button nav-cta js-consult-link" href="https://ichingciv.com/zh/index.html">
             <span class="lang-zh">咨询</span>
             <span class="lang-en">CONSULT</span>
           </a>
@@ -2035,7 +2066,7 @@
                 <span class="lang-zh">了解本站</span>
                 <span class="lang-en">About the Site</span>
               </a>
-              <a class="button button-secondary js-consult-link" href="../consult/zh/index.html">
+              <a class="button button-secondary js-consult-link" href="https://ichingciv.com/zh/index.html">
                 <span class="lang-zh">咨询</span>
                 <span class="lang-en">CONSULT</span>
               </a>
@@ -3659,7 +3690,7 @@
                   </li>
                 </ul>
                 <div class="hero-actions">
-                  <a class="button button-primary js-consult-link" href="../consult/zh/index.html">
+                  <a class="button button-primary js-consult-link" href="https://ichingciv.com/zh/index.html">
                     <span class="lang-zh">进入咨询站</span>
                     <span class="lang-en">Open Consulting Site</span>
                   </a>
@@ -3786,7 +3817,7 @@
             <span class="lang-zh">联系</span>
             <span class="lang-en">Contact</span>
           </a>
-          <a class="js-consult-link" href="../consult/zh/index.html">
+          <a class="js-consult-link" href="https://ichingciv.com/zh/index.html">
             <span class="lang-zh">咨询</span>
             <span class="lang-en">CONSULT</span>
           </a>

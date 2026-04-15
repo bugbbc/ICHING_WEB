@@ -382,17 +382,17 @@ function requestHandler(req, res) {
     requestUrl.pathname === "/consulting" ||
     requestUrl.pathname === "/consulting.html"
   ) {
-    redirect(res, 302, "/consult/en/index.html");
+    redirect(res, 302, "https://ichingciv.com/");
     return;
   }
 
   if (requestUrl.pathname === "/consult/en") {
-    redirect(res, 302, "/consult/en/index.html");
+    redirect(res, 302, "https://ichingciv.com/en/index.html");
     return;
   }
 
   if (requestUrl.pathname === "/consult/zh") {
-    redirect(res, 302, "/consult/zh/index.html");
+    redirect(res, 302, "https://ichingciv.com/zh/index.html");
     return;
   }
 
