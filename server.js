@@ -28,17 +28,20 @@ const MIME_TYPES = {
 };
 
 const LEGACY_REDIRECTS = {
-  "/index.html": "/main/index.html",
-  "/books.html": "/main/books.html",
-  "/conferences.html": "/main/conferences.html",
-  "/guanju-society.html": "/main/guanju-society.html",
+  "/index.html": "/",
+  "/main": "/",
+  "/main/index.html": "/",
+  "/main/books.html": "/books.html",
+  "/main/conferences.html": "/conferences.html",
+  "/main/guanju-society.html": "/guanju-society.html",
+  "/main/journal.html": "https://ichingandcivilization.org/",
+  "/main/lectures.html": "/lectures.html",
+  "/main/research-areas.html": "/research-areas.html",
+  "/main/research-team.html": "/research-team.html",
+  "/main/student-associations.html": "/student-associations.html",
+  "/main/site.js": "/site.js",
+  "/main/subpages.css": "/subpages.css",
   "/journal.html": "https://ichingandcivilization.org/",
-  "/lectures.html": "/main/lectures.html",
-  "/research-areas.html": "/main/research-areas.html",
-  "/research-team.html": "/main/research-team.html",
-  "/student-associations.html": "/main/student-associations.html",
-  "/site.js": "/main/site.js",
-  "/subpages.css": "/main/subpages.css",
 };
 
 class ValidationError extends Error {
@@ -359,16 +362,6 @@ function requestHandler(req, res) {
 
   if (req.method !== "GET" && req.method !== "HEAD") {
     sendText(res, 405, "Method Not Allowed");
-    return;
-  }
-
-  if (requestUrl.pathname === "/") {
-    redirect(res, 302, "/main/index.html");
-    return;
-  }
-
-  if (requestUrl.pathname === "/main") {
-    redirect(res, 302, "/main/index.html");
     return;
   }
 
