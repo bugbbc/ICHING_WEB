@@ -6,10 +6,10 @@
   const navPanel = document.getElementById("nav-panel");
   const navGroups = Array.from(document.querySelectorAll(".nav-group"));
   const consultLinks = Array.from(document.querySelectorAll(".js-consult-link"));
+  const pageLinks = Array.from(document.querySelectorAll("a[href]"));
   const revealItems = Array.from(document.querySelectorAll(".reveal"));
   const inquiryForms = Array.from(document.querySelectorAll(".js-inquiry-form"));
   const baguaModules = Array.from(document.querySelectorAll(".js-bagua"));
-  const LANGUAGE_STORAGE_KEY = "center-language";
   const CONSULT_URLS = {
     zh: "https://ichingciv.com/zh/index.html",
     en: "https://ichingciv.com/en/index.html",
@@ -165,6 +165,52 @@
     });
   }
 
+  function updateLanguageParamInUrl(lang) {
+    const url = new URL(window.location.href);
+    if (lang === "zh") {
+      url.searchParams.set("lang", "zh");
+    } else {
+      url.searchParams.delete("lang");
+    }
+    window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
+  }
+
+  function isInternalPageLink(link) {
+    const rawHref = link.getAttribute("href");
+    if (
+      !rawHref ||
+      rawHref.startsWith("#") ||
+      rawHref.startsWith("mailto:") ||
+      rawHref.startsWith("tel:")
+    ) {
+      return false;
+    }
+
+    const url = new URL(rawHref, window.location.href);
+    if (url.origin !== window.location.origin) {
+      return false;
+    }
+
+    return url.pathname.endsWith(".html") || url.pathname === "/";
+  }
+
+  function updateInternalPageLinks(lang) {
+    pageLinks.forEach((link) => {
+      if (!isInternalPageLink(link)) {
+        return;
+      }
+
+      const url = new URL(link.getAttribute("href"), window.location.href);
+      if (lang === "zh") {
+        url.searchParams.set("lang", "zh");
+      } else {
+        url.searchParams.delete("lang");
+      }
+
+      link.setAttribute("href", `${url.pathname}${url.search}${url.hash}`);
+    });
+  }
+
   function setLanguage(lang) {
     body.dataset.lang = lang;
     html.lang = lang === "zh" ? "zh-CN" : "en";
@@ -176,6 +222,9 @@
       link.href = lang === "zh" ? CONSULT_URLS.zh : CONSULT_URLS.en;
     });
 
+    updateLanguageParamInUrl(lang);
+    updateInternalPageLinks(lang);
+
     if (langSwitch) {
       langSwitch.textContent = lang === "zh" ? "EN" : "中文";
       langSwitch.setAttribute(
@@ -183,25 +232,16 @@
         lang === "zh" ? "Switch to English" : "切换到中文",
       );
     }
-
-    try {
-      localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
-    } catch (error) {
-      // Ignore storage failures.
-    }
   }
 
   function getInitialLanguage() {
-    try {
-      const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY);
-      if (savedLanguage === "zh" || savedLanguage === "en") {
-        return savedLanguage;
-      }
-    } catch (error) {
-      // Ignore storage failures.
+    const url = new URL(window.location.href);
+    const langParam = url.searchParams.get("lang");
+    if (langParam === "zh" || langParam === "en") {
+      return langParam;
     }
 
-    return body.dataset.lang === "zh" ? "zh" : "en";
+    return "en";
   }
 
   if (langSwitch) {
@@ -458,7 +498,7 @@
 
       bits.split("").forEach((bit, index) => {
         const y = startY + index * lineSpacing;
-        if (bit === "0") {
+        if (bit === "1") {
           node
             .append("line")
             .attr("class", "fuxi-line")
