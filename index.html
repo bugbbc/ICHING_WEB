@@ -45,8 +45,12 @@
       body {
         margin: 0;
         font-family: var(--font-sans);
-        background:
-          linear-gradient(180deg, #fbfaf6 0%, var(--paper) 22%, #f7f5ef 100%);
+        background: linear-gradient(
+          180deg,
+          #fbfaf6 0%,
+          var(--paper) 22%,
+          #f7f5ef 100%
+        );
         color: var(--copy);
         line-height: 1.65;
         -webkit-font-smoothing: antialiased;
@@ -120,9 +124,7 @@
         border-radius: 0.5rem;
         background: rgba(255, 255, 255, 0.96);
         box-shadow: 0 10px 26px rgba(18, 38, 58, 0.06);
-        transition:
-          transform 0.2s ease,
-          box-shadow 0.2s ease,
+        transition: transform 0.2s ease, box-shadow 0.2s ease,
           border-color 0.2s ease;
       }
 
@@ -141,8 +143,11 @@
         gap: 0.28rem;
         padding: 0.7rem;
         border-radius: 0.35rem;
-        background:
-          linear-gradient(180deg, rgba(184, 137, 61, 0.12), rgba(18, 38, 58, 0.04)),
+        background: linear-gradient(
+            180deg,
+            rgba(184, 137, 61, 0.12),
+            rgba(18, 38, 58, 0.04)
+          ),
           #f7f3eb;
         border: 1px solid rgba(18, 38, 58, 0.12);
         box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
@@ -291,17 +296,13 @@
         border-radius: 0.55rem;
         border: 1px solid var(--line);
         background: rgba(255, 255, 255, 0.99);
-        box-shadow:
-          0 22px 44px rgba(18, 38, 58, 0.1),
+        box-shadow: 0 22px 44px rgba(18, 38, 58, 0.1),
           0 0 0 1px rgba(18, 38, 58, 0.02);
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
         transform: translateY(0.35rem);
-        transition:
-          opacity 0.2s ease,
-          transform 0.2s ease,
-          visibility 0.2s ease;
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
       }
 
       .nav-submenu::before {
@@ -346,12 +347,8 @@
       .button {
         border: 1px solid transparent;
         cursor: pointer;
-        transition:
-          transform 0.2s ease,
-          background-color 0.2s ease,
-          border-color 0.2s ease,
-          color 0.2s ease,
-          box-shadow 0.2s ease;
+        transition: transform 0.2s ease, background-color 0.2s ease,
+          border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
       }
 
       .lang-switch,
@@ -379,9 +376,16 @@
         overflow: hidden;
         padding: 4.5rem 0 0;
         color: rgba(255, 250, 242, 0.92);
-        background:
-          radial-gradient(circle at 14% 18%, rgba(184, 137, 61, 0.2), transparent 24%),
-          radial-gradient(circle at 82% 18%, rgba(213, 181, 127, 0.12), transparent 30%),
+        background: radial-gradient(
+            circle at 14% 18%,
+            rgba(184, 137, 61, 0.2),
+            transparent 24%
+          ),
+          radial-gradient(
+            circle at 82% 18%,
+            rgba(213, 181, 127, 0.12),
+            transparent 30%
+          ),
           linear-gradient(140deg, #11283d 0%, #17324a 58%, #22384b 100%);
       }
 
@@ -394,8 +398,7 @@
 
       .hero::before {
         inset: 0;
-        background:
-          repeating-linear-gradient(
+        background: repeating-linear-gradient(
             90deg,
             rgba(255, 250, 242, 0.055) 0,
             rgba(255, 250, 242, 0.055) 1px,
@@ -572,8 +575,11 @@
         overflow: hidden;
         border-radius: 0.55rem;
         border: 1px solid var(--line-strong);
-        background:
-          linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03)),
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.03)
+          ),
           rgba(10, 24, 36, 0.28);
         box-shadow: var(--shadow);
       }
@@ -788,8 +794,11 @@
       .image-card.diagram img {
         object-fit: contain;
         padding: 1.2rem;
-        background:
-          radial-gradient(circle at 50% 30%, rgba(159, 106, 52, 0.08), transparent 40%),
+        background: radial-gradient(
+            circle at 50% 30%,
+            rgba(159, 106, 52, 0.08),
+            transparent 40%
+          ),
           rgba(255, 250, 242, 0.98);
       }
 
@@ -843,17 +852,23 @@
         flex-direction: column;
         justify-content: center;
         gap: 1rem;
-        background:
-          radial-gradient(circle at 50% 50%, rgba(159, 106, 52, 0.08), transparent 32%),
-          linear-gradient(180deg, rgba(255, 250, 242, 0.96), rgba(244, 237, 224, 0.92));
+        background: radial-gradient(
+            circle at 50% 50%,
+            rgba(159, 106, 52, 0.08),
+            transparent 32%
+          ),
+          linear-gradient(
+            180deg,
+            rgba(255, 250, 242, 0.96),
+            rgba(244, 237, 224, 0.92)
+          );
       }
 
       .bagua-stage::before {
         content: "";
         position: absolute;
         inset: 0;
-        background:
-          repeating-linear-gradient(
+        background: repeating-linear-gradient(
             90deg,
             rgba(17, 26, 32, 0.025) 0,
             rgba(17, 26, 32, 0.025) 1px,
@@ -878,11 +893,17 @@
         flex: 1 1 auto;
         --bagua-radius: 14rem;
         border-radius: 50%;
-        background:
-          radial-gradient(circle at 50% 48%, rgba(159, 106, 52, 0.12), transparent 28%),
-          linear-gradient(180deg, rgba(255, 250, 242, 0.98), rgba(242, 234, 220, 0.94));
-        box-shadow:
-          inset 0 0 0 1px rgba(17, 26, 32, 0.08),
+        background: radial-gradient(
+            circle at 50% 48%,
+            rgba(159, 106, 52, 0.12),
+            transparent 28%
+          ),
+          linear-gradient(
+            180deg,
+            rgba(255, 250, 242, 0.98),
+            rgba(242, 234, 220, 0.94)
+          );
+        box-shadow: inset 0 0 0 1px rgba(17, 26, 32, 0.08),
           0 30px 60px rgba(17, 26, 32, 0.08);
       }
 
@@ -896,8 +917,7 @@
 
       .bagua-orbit::before {
         inset: 3.5%;
-        background:
-          radial-gradient(
+        background: radial-gradient(
             circle at center,
             rgba(255, 250, 242, 0.96) 0 17%,
             transparent 17.4% 30.6%,
@@ -940,8 +960,7 @@
         background: #fffaf2;
         pointer-events: none;
         z-index: 3;
-        box-shadow:
-          0 18px 38px rgba(17, 26, 32, 0.12),
+        box-shadow: 0 18px 38px rgba(17, 26, 32, 0.12),
           inset 0 0 0 12px rgba(255, 250, 242, 0.7);
       }
 
@@ -974,27 +993,23 @@
         display: block;
         border: 1px solid rgba(17, 26, 32, 0.14);
         clip-path: polygon(18% 0, 82% 0, 100% 100%, 0 100%);
-        background:
-          linear-gradient(180deg, rgba(255, 250, 242, 0.9), rgba(240, 231, 215, 0.92));
+        background: linear-gradient(
+          180deg,
+          rgba(255, 250, 242, 0.9),
+          rgba(240, 231, 215, 0.92)
+        );
         color: var(--ink);
-        box-shadow:
-          inset 0 0 0 1px rgba(255, 250, 242, 0.5),
+        box-shadow: inset 0 0 0 1px rgba(255, 250, 242, 0.5),
           0 10px 24px rgba(17, 26, 32, 0.06);
         cursor: pointer;
         user-select: none;
         touch-action: manipulation;
         z-index: 2;
-        transform:
-          translate(-50%, -50%)
-          rotate(var(--angle))
+        transform: translate(-50%, -50%) rotate(var(--angle))
           translateY(calc(-1 * var(--bagua-radius)));
         transform-origin: center center;
-        transition:
-          transform 0.2s ease,
-          background-color 0.2s ease,
-          color 0.2s ease,
-          border-color 0.2s ease,
-          box-shadow 0.2s ease;
+        transition: transform 0.2s ease, background-color 0.2s ease,
+          color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
       }
 
       .bagua-trigger-content {
@@ -1016,16 +1031,12 @@
       #bagua-gen:checked ~ .bagua-stage [data-bagua-trigger="gen"],
       #bagua-dui:checked ~ .bagua-stage [data-bagua-trigger="dui"],
       .bagua-trigger.is-active {
-        transform:
-          translate(-50%, -50%)
-          rotate(var(--angle))
-          translateY(calc(-1 * var(--bagua-radius)))
-          scale(1.04);
+        transform: translate(-50%, -50%) rotate(var(--angle))
+          translateY(calc(-1 * var(--bagua-radius))) scale(1.04);
         background: linear-gradient(180deg, #15232d, #0d1419);
         color: #fffaf2;
         border-color: rgba(17, 26, 32, 0.55);
-        box-shadow:
-          inset 0 0 0 1px rgba(255, 250, 242, 0.12),
+        box-shadow: inset 0 0 0 1px rgba(255, 250, 242, 0.12),
           0 18px 38px rgba(17, 26, 32, 0.16);
       }
 
@@ -1166,17 +1177,28 @@
       }
 
       .section-light {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.98));
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.95),
+          rgba(255, 255, 255, 0.98)
+        );
       }
 
       .section-soft {
-        background: linear-gradient(180deg, rgba(18, 38, 58, 0.02), rgba(18, 38, 58, 0.03));
+        background: linear-gradient(
+          180deg,
+          rgba(18, 38, 58, 0.02),
+          rgba(18, 38, 58, 0.03)
+        );
       }
 
       .section-dark {
         color: rgba(255, 250, 242, 0.88);
-        background:
-          linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.02),
+            rgba(255, 255, 255, 0)
+          ),
           #11283d;
       }
 
@@ -1321,8 +1343,11 @@
       .event-card,
       .event-item {
         padding: 1.4rem;
-        background:
-          linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.02)
+          ),
           rgba(255, 255, 255, 0.02);
         border-color: rgba(255, 250, 242, 0.14);
         border-top: 4px solid rgba(184, 137, 61, 0.56);
@@ -1384,9 +1409,16 @@
         position: relative;
         overflow: hidden;
         padding: 1.6rem;
-        background:
-          radial-gradient(circle at 82% 20%, rgba(184, 137, 61, 0.14), transparent 28%),
-          linear-gradient(160deg, rgba(255, 255, 255, 0.96), rgba(240, 235, 224, 0.88));
+        background: radial-gradient(
+            circle at 82% 20%,
+            rgba(184, 137, 61, 0.14),
+            transparent 28%
+          ),
+          linear-gradient(
+            160deg,
+            rgba(255, 255, 255, 0.96),
+            rgba(240, 235, 224, 0.88)
+          );
         border-top: 4px solid rgba(184, 137, 61, 0.82);
       }
 
@@ -1483,8 +1515,11 @@
         padding: 1rem;
         border-radius: 0.5rem;
         border: 1px solid rgba(18, 38, 58, 0.09);
-        background:
-          radial-gradient(circle at center, rgba(184, 137, 61, 0.08), transparent 54%),
+        background: radial-gradient(
+            circle at center,
+            rgba(184, 137, 61, 0.08),
+            transparent 54%
+          ),
           linear-gradient(180deg, #fffdfa 0%, #f7f4ee 100%);
       }
 
@@ -1628,8 +1663,11 @@
         place-items: center;
         padding: 1rem;
         border-bottom: 1px solid var(--line);
-        background:
-          radial-gradient(circle at top, rgba(184, 137, 61, 0.08), transparent 42%),
+        background: radial-gradient(
+            circle at top,
+            rgba(184, 137, 61, 0.08),
+            transparent 42%
+          ),
           linear-gradient(180deg, #fffdfa 0%, #f8f5ef 100%);
       }
 
@@ -1916,8 +1954,12 @@
         position: relative;
         overflow: hidden;
         color: rgba(255, 250, 242, 0.88);
-        background:
-          linear-gradient(145deg, #11283d 0%, #17324a 58%, #20384f 100%);
+        background: linear-gradient(
+          145deg,
+          #11283d 0%,
+          #17324a 58%,
+          #20384f 100%
+        );
         border-color: rgba(255, 250, 242, 0.12);
       }
 
@@ -2083,9 +2125,7 @@
       .reveal {
         opacity: 0;
         transform: translateY(22px);
-        transition:
-          opacity 0.7s ease,
-          transform 0.7s ease;
+        transition: opacity 0.7s ease, transform 0.7s ease;
       }
 
       .reveal.is-visible {
@@ -2386,7 +2426,8 @@
             >个人独立运营 · 易学研究、文明对话与咨询服务</span
           >
           <span class="lang-en"
-            >Independently operated · Zhouyi research, civilizational dialogue, and advisory services</span
+            >Independently operated · Zhouyi research, civilizational dialogue,
+            and advisory services</span
           >
         </div>
       </div>
@@ -2519,7 +2560,10 @@
             </a>
           </nav>
 
-          <a class="button nav-cta js-consult-link" href="https://ichingciv.com/en/index.html">
+          <a
+            class="button nav-cta js-consult-link"
+            href="https://ichingciv.com/en/index.html"
+          >
             <span class="lang-zh">咨询</span>
             <span class="lang-en">CONSULT</span>
           </a>
@@ -2537,7 +2581,7 @@
           <article class="explorer-shell reveal">
             <figure class="explorer-canvas explorer-static-figure">
               <img
-                src="images/fuxi-square-round-static.svg"
+                src="images/image.png"
                 alt="Fu Xi 64-Hexagram square-round diagram"
               />
             </figure>
@@ -2553,10 +2597,22 @@
                 <span class="lang-zh">我们是谁</span>
                 <span class="lang-en">Who We Are</span>
               </h2>
-              <p class="lang-zh">易经文明研究院是一个以《周易》为核心的学术研究平台，致力于从经典出发，探讨法律、制度与文明的基本问题。</p>
-              <p class="lang-zh">本机构以跨学科与跨文明视野，推动对《周易》的文本、思想及其当代意义的系统研究。</p>
-              <p class="lang-en">The I Ching Civilization Institute is an academic platform dedicated to the study of the I Ching as a foundational text for understanding law, institutions, and civilization.</p>
-              <p class="lang-en">It promotes interdisciplinary and cross-civilizational research on the textual, philosophical, and contemporary significance of the I Ching.</p>
+              <p class="lang-zh">
+                易经文明研究院是一个以《周易》为核心的学术研究平台，致力于从经典出发，探讨法律、制度与文明的基本问题。
+              </p>
+              <p class="lang-zh">
+                本机构以跨学科与跨文明视野，推动对《周易》的文本、思想及其当代意义的系统研究。
+              </p>
+              <p class="lang-en">
+                The I Ching Civilization Institute is an academic platform
+                dedicated to the study of the I Ching as a foundational text for
+                understanding law, institutions, and civilization.
+              </p>
+              <p class="lang-en">
+                It promotes interdisciplinary and cross-civilizational research
+                on the textual, philosophical, and contemporary significance of
+                the I Ching.
+              </p>
             </article>
 
             <article class="intro-card reveal">
@@ -2569,7 +2625,10 @@
                 <span class="lang-en">Our Mission</span>
               </h2>
               <p class="lang-zh">本机构的使命是促进文化的复兴与制度的转型。</p>
-              <p class="lang-en">Its mission is to advance cultural renewal and institutional transformation.</p>
+              <p class="lang-en">
+                Its mission is to advance cultural renewal and institutional
+                transformation.
+              </p>
             </article>
           </div>
         </div>
@@ -2587,8 +2646,14 @@
               <span class="lang-en">New Publications</span>
             </h2>
             <p class="section-copy">
-              <span class="lang-zh">首页以出版矩阵方式展示最新期刊、专书、工作论文与译介成果，布局参照机构型出版站的栏目首页。</span>
-              <span class="lang-en">The homepage presents recent journals, books, working papers, and translation projects in a publication matrix modeled on editorial institutional sites.</span>
+              <span class="lang-zh"
+                >首页以出版矩阵方式展示最新期刊、专书、工作论文与译介成果，布局参照机构型出版站的栏目首页。</span
+              >
+              <span class="lang-en"
+                >The homepage presents recent journals, books, working papers,
+                and translation projects in a publication matrix modeled on
+                editorial institutional sites.</span
+              >
             </p>
           </div>
 
@@ -2603,11 +2668,22 @@
               <div class="program-body">
                 <h3>
                   <span class="lang-zh">论《周易》坤卦的权利思想</span>
-                  <span class="lang-en">On the Concept of Rights in the Kun Hexagram of the I Ching</span>
+                  <span class="lang-en"
+                    >On the Concept of Rights in the Kun Hexagram of the I
+                    Ching</span
+                  >
                 </h3>
                 <p class="lang-zh">论文 PDF，围绕坤卦中的权利思想展开讨论。</p>
-                <p class="lang-en">PDF article on the idea of rights as interpreted through the Kun hexagram.</p>
-                <a class="program-link" href="publications/kun-rights.pdf" target="_blank" rel="noopener">
+                <p class="lang-en">
+                  PDF article on the idea of rights as interpreted through the
+                  Kun hexagram.
+                </p>
+                <a
+                  class="program-link"
+                  href="publications/kun-rights.pdf"
+                  target="_blank"
+                  rel="noopener"
+                >
                   <span class="lang-zh">阅读论文</span>
                   <span class="lang-en">Read PDF</span>
                 </a>
@@ -2628,11 +2704,24 @@
               <div class="program-body">
                 <h3>
                   <span class="lang-zh">《周易》坎离两卦中的殷周故事</span>
-                  <span class="lang-en">Shang-Zhou Narratives in the Kan and Li Hexagrams of the I Ching</span>
+                  <span class="lang-en"
+                    >Shang-Zhou Narratives in the Kan and Li Hexagrams of the I
+                    Ching</span
+                  >
                 </h3>
-                <p class="lang-zh">论文 PDF，讨论坎离两卦中所包含的殷周历史叙事。</p>
-                <p class="lang-en">PDF article on Shang and Zhou narratives embedded in the Kan and Li hexagrams.</p>
-                <a class="program-link" href="publications/kan-li-stories.pdf" target="_blank" rel="noopener">
+                <p class="lang-zh">
+                  论文 PDF，讨论坎离两卦中所包含的殷周历史叙事。
+                </p>
+                <p class="lang-en">
+                  PDF article on Shang and Zhou narratives embedded in the Kan
+                  and Li hexagrams.
+                </p>
+                <a
+                  class="program-link"
+                  href="publications/kan-li-stories.pdf"
+                  target="_blank"
+                  rel="noopener"
+                >
                   <span class="lang-zh">阅读论文</span>
                   <span class="lang-en">Read PDF</span>
                 </a>
@@ -2649,11 +2738,22 @@
               <div class="program-body">
                 <h3>
                   <span class="lang-zh">《周易》损益之道与威尔逊执政</span>
-                  <span class="lang-en">The Way of Loss and Gain in the I Ching and the Wilson Administration</span>
+                  <span class="lang-en"
+                    >The Way of Loss and Gain in the I Ching and the Wilson
+                    Administration</span
+                  >
                 </h3>
                 <p class="lang-zh">论文 PDF，从损益之道出发讨论威尔逊执政。</p>
-                <p class="lang-en">PDF article relating the logic of loss and gain in the I Ching to the Wilson administration.</p>
-                <a class="program-link" href="publications/sun-yi-wilson.pdf" target="_blank" rel="noopener">
+                <p class="lang-en">
+                  PDF article relating the logic of loss and gain in the I Ching
+                  to the Wilson administration.
+                </p>
+                <a
+                  class="program-link"
+                  href="publications/sun-yi-wilson.pdf"
+                  target="_blank"
+                  rel="noopener"
+                >
                   <span class="lang-zh">阅读论文</span>
                   <span class="lang-en">Read PDF</span>
                 </a>
@@ -2670,11 +2770,24 @@
               <div class="program-body">
                 <h3>
                   <span class="lang-zh">《周易》泰否之道与西方民主之路</span>
-                  <span class="lang-en">The Way of Tai and Pi in the I Ching and the Path of Western Democracy</span>
+                  <span class="lang-en"
+                    >The Way of Tai and Pi in the I Ching and the Path of
+                    Western Democracy</span
+                  >
                 </h3>
-                <p class="lang-zh">论文 PDF，讨论泰否之道与西方民主发展之间的关系。</p>
-                <p class="lang-en">PDF article connecting the Tai/Pi dynamic of the I Ching to the development of Western democracy.</p>
-                <a class="program-link" href="publications/tai-pi-democracy.pdf" target="_blank" rel="noopener">
+                <p class="lang-zh">
+                  论文 PDF，讨论泰否之道与西方民主发展之间的关系。
+                </p>
+                <p class="lang-en">
+                  PDF article connecting the Tai/Pi dynamic of the I Ching to
+                  the development of Western democracy.
+                </p>
+                <a
+                  class="program-link"
+                  href="publications/tai-pi-democracy.pdf"
+                  target="_blank"
+                  rel="noopener"
+                >
                   <span class="lang-zh">阅读论文</span>
                   <span class="lang-en">Read PDF</span>
                 </a>
@@ -2695,11 +2808,21 @@
               <div class="program-body">
                 <h3>
                   <span class="lang-zh">周易天义（部分）</span>
-                  <span class="lang-en">Heavenly Principles of the I Ching (Excerpt)</span>
+                  <span class="lang-en"
+                    >Heavenly Principles of the I Ching (Excerpt)</span
+                  >
                 </h3>
                 <p class="lang-zh">专著节选 PDF。</p>
-                <p class="lang-en">Excerpt PDF from the monograph Heavenly Principles of the I Ching.</p>
-                <a class="program-link" href="publications/zhouyi-tianyi-excerpt.pdf" target="_blank" rel="noopener">
+                <p class="lang-en">
+                  Excerpt PDF from the monograph Heavenly Principles of the I
+                  Ching.
+                </p>
+                <a
+                  class="program-link"
+                  href="publications/zhouyi-tianyi-excerpt.pdf"
+                  target="_blank"
+                  rel="noopener"
+                >
                   <span class="lang-zh">阅读专著</span>
                   <span class="lang-en">Read PDF</span>
                 </a>
@@ -2716,11 +2839,22 @@
               <div class="program-body">
                 <h3>
                   <span class="lang-zh">文化场所管理的比较法研究（部分）</span>
-                  <span class="lang-en">A Comparative Law Study of Cultural Venue Management (Excerpt)</span>
+                  <span class="lang-en"
+                    >A Comparative Law Study of Cultural Venue Management
+                    (Excerpt)</span
+                  >
                 </h3>
                 <p class="lang-zh">专著节选 PDF。</p>
-                <p class="lang-en">Excerpt PDF from a comparative-law study of cultural venue management.</p>
-                <a class="program-link" href="publications/cultural-venue-law-excerpt.pdf" target="_blank" rel="noopener">
+                <p class="lang-en">
+                  Excerpt PDF from a comparative-law study of cultural venue
+                  management.
+                </p>
+                <a
+                  class="program-link"
+                  href="publications/cultural-venue-law-excerpt.pdf"
+                  target="_blank"
+                  rel="noopener"
+                >
                   <span class="lang-zh">阅读专著</span>
                   <span class="lang-en">Read PDF</span>
                 </a>
@@ -2742,8 +2876,15 @@
               <span class="lang-en">Upcoming Events</span>
             </h2>
             <p class="section-copy">
-              <span class="lang-zh">2026 年 5 月将举办连续三场学术讲座，围绕《周易》文本形成、身心结构与文明秩序展开系统讨论。</span>
-              <span class="lang-en">In May 2026, the Institute will host a three-part seminar series on textual formation, psycho-structural interpretation, and civilizational order in the I Ching.</span>
+              <span class="lang-zh"
+                >2026 年 5
+                月将举办连续三场学术讲座，围绕《周易》文本形成、身心结构与文明秩序展开系统讨论。</span
+              >
+              <span class="lang-en"
+                >In May 2026, the Institute will host a three-part seminar
+                series on textual formation, psycho-structural interpretation,
+                and civilizational order in the I Ching.</span
+              >
             </p>
           </div>
 
@@ -2764,13 +2905,31 @@
                   <span class="event-date-year">2026</span>
                 </div>
                 <div class="event-body-new">
-                  <time datetime="2026-05-06T15:00"><span class="lang-zh">5月6日（周三）15:00–16:00 ｜ 丁四新（清华大学）</span><span class="lang-en">May 6 (Wed), 15:00–16:00 | Ding Sixin (Tsinghua University)</span></time>
+                  <time datetime="2026-05-06T15:00"
+                    ><span class="lang-zh"
+                      >5月6日（周三）15:00–16:00 ｜ 丁四新（清华大学）</span
+                    ><span class="lang-en"
+                      >May 6 (Wed), 15:00–16:00 | Ding Sixin (Tsinghua
+                      University)</span
+                    ></time
+                  >
                   <h3>
-                    <span class="lang-zh">出土文献视野下的《周易》文本形成与结构演变</span>
-                    <span class="lang-en">The Formation and Structural Evolution of the I Ching in Light of Excavated Texts</span>
+                    <span class="lang-zh"
+                      >出土文献视野下的《周易》文本形成与结构演变</span
+                    >
+                    <span class="lang-en"
+                      >The Formation and Structural Evolution of the I Ching in
+                      Light of Excavated Texts</span
+                    >
                   </h3>
-                  <p class="lang-zh">从战国简帛与汉代出土文献出发，重新审视《周易》文本的形成机制与结构演变过程。</p>
-                  <p class="lang-en">A re-examination of the formation of the I Ching through Warring States and Han excavated manuscripts, with emphasis on textual layering and structural development.</p>
+                  <p class="lang-zh">
+                    从战国简帛与汉代出土文献出发，重新审视《周易》文本的形成机制与结构演变过程。
+                  </p>
+                  <p class="lang-en">
+                    A re-examination of the formation of the I Ching through
+                    Warring States and Han excavated manuscripts, with emphasis
+                    on textual layering and structural development.
+                  </p>
                   <a class="event-link" href="lectures.html">
                     <span class="lang-zh">查看讲座详情</span>
                     <span class="lang-en">View Lecture Details</span>
@@ -2785,13 +2944,31 @@
                   <span class="event-date-year">2026</span>
                 </div>
                 <div class="event-body-new">
-                  <time datetime="2026-05-13T15:00"><span class="lang-zh">5月13日（周三）15:00–16:00 ｜ 张文智（山东大学）</span><span class="lang-en">May 13 (Wed), 15:00–16:00 | Zhang Wenzhi (Shandong University)</span></time>
+                  <time datetime="2026-05-13T15:00"
+                    ><span class="lang-zh"
+                      >5月13日（周三）15:00–16:00 ｜ 张文智（山东大学）</span
+                    ><span class="lang-en"
+                      >May 13 (Wed), 15:00–16:00 | Zhang Wenzhi (Shandong
+                      University)</span
+                    ></time
+                  >
                   <h3>
-                    <span class="lang-zh">从《黄帝内经》到荣格心理学：《周易》的身心结构与跨文化解释</span>
-                    <span class="lang-en">From the Huangdi Neijing to Jungian Psychology: The Psycho-Structural Interpretation of the I Ching</span>
+                    <span class="lang-zh"
+                      >从《黄帝内经》到荣格心理学：《周易》的身心结构与跨文化解释</span
+                    >
+                    <span class="lang-en"
+                      >From the Huangdi Neijing to Jungian Psychology: The
+                      Psycho-Structural Interpretation of the I Ching</span
+                    >
                   </h3>
-                  <p class="lang-zh">结合《黄帝内经》的系统思维与荣格分析心理学，讨论《周易》如何进入身心结构分析与跨文化解释框架。</p>
-                  <p class="lang-en">An exploration of the I Ching through the system-oriented worldview of the Huangdi Neijing and Jungian analytical psychology.</p>
+                  <p class="lang-zh">
+                    结合《黄帝内经》的系统思维与荣格分析心理学，讨论《周易》如何进入身心结构分析与跨文化解释框架。
+                  </p>
+                  <p class="lang-en">
+                    An exploration of the I Ching through the system-oriented
+                    worldview of the Huangdi Neijing and Jungian analytical
+                    psychology.
+                  </p>
                   <a class="event-link" href="lectures.html">
                     <span class="lang-zh">查看讲座详情</span>
                     <span class="lang-en">View Lecture Details</span>
@@ -2806,13 +2983,33 @@
                   <span class="event-date-year">2026</span>
                 </div>
                 <div class="event-body-new">
-                  <time datetime="2026-05-20T15:00"><span class="lang-zh">5月20日（周三）15:00–16:00 ｜ 冯象（清华大学法学院）</span><span class="lang-en">May 20 (Wed), 15:00–16:00 | Feng Xiang (Tsinghua University Law School)</span></time>
+                  <time datetime="2026-05-20T15:00"
+                    ><span class="lang-zh"
+                      >5月20日（周三）15:00–16:00 ｜
+                      冯象（清华大学法学院）</span
+                    ><span class="lang-en"
+                      >May 20 (Wed), 15:00–16:00 | Feng Xiang (Tsinghua
+                      University Law School)</span
+                    ></time
+                  >
                   <h3>
-                    <span class="lang-zh">经典解释、法律思想与文明秩序：从《圣经》到《周易》的比较研究</span>
-                    <span class="lang-en">Classical Interpretation, Legal Thought, and Civilizational Order: A Comparative Study from the Bible to the I Ching</span>
+                    <span class="lang-zh"
+                      >经典解释、法律思想与文明秩序：从《圣经》到《周易》的比较研究</span
+                    >
+                    <span class="lang-en"
+                      >Classical Interpretation, Legal Thought, and
+                      Civilizational Order: A Comparative Study from the Bible
+                      to the I Ching</span
+                    >
                   </h3>
-                  <p class="lang-zh">比较《圣经》传统与《周易》解释体系在文明秩序建构中的不同路径，讨论经典文本如何参与法律与伦理秩序生成。</p>
-                  <p class="lang-en">A comparative study of biblical and I Ching interpretive traditions, focusing on their roles in legal, ethical, and civilizational order.</p>
+                  <p class="lang-zh">
+                    比较《圣经》传统与《周易》解释体系在文明秩序建构中的不同路径，讨论经典文本如何参与法律与伦理秩序生成。
+                  </p>
+                  <p class="lang-en">
+                    A comparative study of biblical and I Ching interpretive
+                    traditions, focusing on their roles in legal, ethical, and
+                    civilizational order.
+                  </p>
                   <a class="event-link" href="lectures.html">
                     <span class="lang-zh">查看讲座详情</span>
                     <span class="lang-en">View Lecture Details</span>
