@@ -561,12 +561,30 @@ img {
   padding: 1.35rem;
 }
 
-.content-card h3 {
-  margin: 0;
+.content-card h2 {
+  margin: 0 0 1.25rem;
   font-family: var(--font-serif);
-  font-size: 1.72rem;
+  font-size: clamp(2rem, 3vw, 2.85rem);
   line-height: 1.02;
   color: var(--ink);
+}
+
+.content-card h3 {
+  margin: 1.55rem 0 0;
+  font-family: var(--font-serif);
+  font-size: 1.72rem;
+  line-height: 1.08;
+  color: var(--ink);
+}
+
+.content-card h4 {
+  margin: 1.2rem 0 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
 .content-card p {
