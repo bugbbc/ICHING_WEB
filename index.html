@@ -1479,7 +1479,7 @@
       }
 
       .explorer-canvas {
-        margin-top: 1.15rem;
+        margin-top: 0;
         padding: 1rem;
         border-radius: 0.5rem;
         border: 1px solid rgba(18, 38, 58, 0.09);
@@ -1490,6 +1490,7 @@
 
       .explorer-static-figure {
         display: block;
+        margin: 0;
       }
 
       .explorer-static-figure img {
@@ -2534,22 +2535,6 @@
       <section class="section section-light home-hero" id="about">
         <div class="container home-hero-grid">
           <article class="explorer-shell reveal">
-            <div class="explorer-head">
-              <h1 class="explorer-title">
-                <span class="lang-zh">伏羲六十四卦方圆图</span>
-                <span class="lang-en">Fu Xi 64-Hexagram Square-Round Diagram</span>
-              </h1>
-              <p class="explorer-copy">
-                <span class="lang-zh">下图展示伏羲六十四卦方圆图的静态排布，并保留“阳爻=1、阴爻=0、上爻为最高有效位”的编码说明。</span>
-                <span class="lang-en">The figure below presents a static square-round arrangement of the sixty-four hexagrams while retaining the coding rule solid = 1, broken = 0, with the top line treated as the most significant bit.</span>
-              </p>
-            </div>
-
-            <div class="mapping-note">
-              <p class="lang-zh">本工具严格使用以下映射关系：阳爻（实线）代表“1”，阴爻（断线）代表“0”，并从上到下读取为二进制最高位到最低位。由此，全阴卦坤为 000000（十进制 0），全阳卦乾为 111111（十进制 63）。</p>
-              <p class="lang-en">This explorer follows a strict mapping: solid lines represent 1, broken lines represent 0, and the six lines are read from top to bottom as the most significant bit to the least significant bit. Under this rule, Kun is 000000 (decimal 0) and Qian is 111111 (decimal 63).</p>
-            </div>
-
             <figure class="explorer-canvas explorer-static-figure">
               <img
                 src="images/fuxi-square-round-static.svg"
