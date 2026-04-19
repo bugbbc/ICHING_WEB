@@ -1,9 +1,12 @@
 /index.html / 301
+/guanju /guanju/index.html 302
+/guanju/ /guanju/index.html 302
 /main / 301
 /main/index.html / 301
 /main/books.html /books.html 301
 /main/conferences.html /conferences.html 301
-/main/guanju-society.html /guanju-society.html 301
+/main/guanju-society.html https://ichingciv.net/ 301
+/guanju-society.html https://ichingciv.net/ 301
 /main/journal.html https://ichingandcivilization.org/ 301
 /main/lectures.html /lectures.html 301
 /main/research-areas.html /research-areas.html 301

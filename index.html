@@ -1488,6 +1488,16 @@
           linear-gradient(180deg, #fffdfa 0%, #f7f4ee 100%);
       }
 
+      .explorer-static-figure {
+        display: block;
+      }
+
+      .explorer-static-figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
       .explorer-canvas svg {
         display: block;
         width: 100%;
@@ -2491,8 +2501,8 @@
                 <span class="nav-caret" aria-hidden="true"></span>
               </button>
               <div class="nav-submenu">
-                <a href="guanju-society.html">
-                  <span class="lang-zh">关雎学社</span>
+                <a href="https://ichingciv.net/">
+                  <span class="lang-zh">关雎会</span>
                   <span class="lang-en">Guanju Society</span>
                 </a>
                 <a href="student-associations.html">
@@ -2530,8 +2540,8 @@
                 <span class="lang-en">Fu Xi 64-Hexagram Square-Round Diagram</span>
               </h1>
               <p class="explorer-copy">
-                <span class="lang-zh">点击圆图或方图中的任一卦象，查看它在“阳爻=1、阴爻=0、上爻为最高有效位”这一系统中的二进制与十进制位置。</span>
-                <span class="lang-en">Select any hexagram in the round or square arrangement to examine its binary and decimal position under the rule solid = 1, broken = 0, with the top line treated as the most significant bit.</span>
+                <span class="lang-zh">下图展示伏羲六十四卦方圆图的静态排布，并保留“阳爻=1、阴爻=0、上爻为最高有效位”的编码说明。</span>
+                <span class="lang-en">The figure below presents a static square-round arrangement of the sixty-four hexagrams while retaining the coding rule solid = 1, broken = 0, with the top line treated as the most significant bit.</span>
               </p>
             </div>
 
@@ -2540,32 +2550,12 @@
               <p class="lang-en">This explorer follows a strict mapping: solid lines represent 1, broken lines represent 0, and the six lines are read from top to bottom as the most significant bit to the least significant bit. Under this rule, Kun is 000000 (decimal 0) and Qian is 111111 (decimal 63).</p>
             </div>
 
-            <div class="explorer-canvas js-fuxi-explorer" aria-label="Interactive Fu Xi 64-Hexagram square-round explorer"></div>
-
-            <article class="explorer-meta" data-fuxi-detail>
-              <div>
-                <span class="detail-tag">
-                  <span class="lang-zh">当前卦象</span>
-                  <span class="lang-en">Selected Hexagram</span>
-                </span>
-                <h3 data-fuxi-name>
-                  <span class="lang-zh">坤</span>
-                  <span class="lang-en">Kun · The Receptive</span>
-                </h3>
-                <p data-fuxi-copy>
-                  <span class="lang-zh">坤由上卦坤与下卦坤构成。在本工具中，依“阳爻=1、阴爻=0、上爻为最高位”的规则，它的六位编码为 000000，对应十进制 0。</span>
-                  <span class="lang-en">Kun is composed of Kun above and Kun below. Under the mapping solid = 1, broken = 0, with the top line as the most significant bit, its six-line code is 000000, which corresponds to decimal 0.</span>
-                </p>
-                <p data-fuxi-structure>
-                  <span class="lang-zh">上卦 000（坤）｜下卦 000（坤）</span>
-                  <span class="lang-en">Upper trigram 000 (Kun) | Lower trigram 000 (Kun)</span>
-                </p>
-              </div>
-              <div class="detail-binary" data-fuxi-bits>
-                000000
-                <small>DEC 0</small>
-              </div>
-            </article>
+            <figure class="explorer-canvas explorer-static-figure">
+              <img
+                src="images/fuxi-square-round-static.svg"
+                alt="Fu Xi 64-Hexagram square-round diagram"
+              />
+            </figure>
           </article>
 
           <div class="intro-stack">
@@ -2857,7 +2847,6 @@
         </div>
       </div>
     </footer>
-    <script src="d3.min.js?v=20260418-1"></script>
     <script src="site.js?v=20260418-4"></script>
   </body>
 </html>
