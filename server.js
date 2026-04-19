@@ -35,7 +35,7 @@ const LEGACY_REDIRECTS = {
   "/main/index.html": "/",
   "/main/books.html": "/books.html",
   "/main/conferences.html": "/conferences.html",
-  "/main/guanju-society.html": "https://ichingciv.net/",
+  "/main/guanju-society.html": "https://www.ichingciv.net/",
   "/main/journal.html": "https://ichingandcivilization.org/",
   "/main/lectures.html": "/lectures.html",
   "/main/research-areas.html": "/research-areas.html",
@@ -43,7 +43,7 @@ const LEGACY_REDIRECTS = {
   "/main/student-associations.html": "/student-associations.html",
   "/main/site.js": "/site.js",
   "/main/subpages.css": "/subpages.css",
-  "/guanju-society.html": "https://ichingciv.net/",
+  "/guanju-society.html": "https://www.ichingciv.net/",
   "/journal.html": "https://ichingandcivilization.org/",
 };
 
